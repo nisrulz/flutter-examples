@@ -344,4 +344,7 @@ playground.xcworkspace
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
+# Build Files
+build/
+
 # End of https://www.gitignore.io/api/dart,swift,xcode,android,intellij,cocoapods,objective-c,androidstudio
