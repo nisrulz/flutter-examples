@@ -1,4 +1,4 @@
-![Image](/img/github_banner.png)
+![Image](img/github_banner.png)
 
 
 ### Show some :heart: and star the repo to support the project
@@ -9,14 +9,19 @@ Main repository containing all the example apps demonstrating features/functiona
 
 ## Example apps
 
-1. [Simple Material App](/simple_material_app) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/simple_material_app)
-1. [Using Theme](/using_theme) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_theme)
-1. [Stateless Widget](/stateless_widget) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/stateless_widget)
-1. [Stateful Widget](/stateful_widget) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/stateful_widget)
-1. [Using EditText](/using_edittext) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_edittext)
-1. [Load local image](/load_local_image) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/load_local_image)
-1. [Load local json](/load_local_json) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/load_local_json)
-1. [Using HTTP GET](/using_http_get) [![download](/img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_http_get)
+1. [Simple Material App](/simple_material_app) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/simple_material_app)
+1. [Using Theme](/using_theme) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_theme)
+1. [Stateless Widget](/stateless_widget) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/stateless_widget)
+1. [Stateful Widget](/stateful_widget) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/stateful_widget)
+1. [Using EditText](/using_edittext) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_edittext)
+1. [Load local image](/load_local_image) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/load_local_image)
+1. [Load local json](/load_local_json) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/load_local_json)
+1. [Using HTTP GET](/using_http_get) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_http_get)
+1. [Using Alert Dialog](/using_alert_dialog) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_alert_dialog)
+
+### Complete apps with multiple features
+
+1. [Tip Calculator](/tip_calculator) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/tip_calculator)
 
 
 # Pull Requests
