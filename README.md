@@ -5,7 +5,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/flutter-examples.svg?style=social&label=Star)](https://github.com/nisrulz/flutter-examples) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/flutter-examples.svg?style=social&label=Fork)](https://github.com/nisrulz/flutter-examples/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/flutter-examples.svg?style=social&label=Watch)](https://github.com/nisrulz/flutter-examples) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/flutter-examples)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)
 
-Main repository containing all the example apps demonstrating features/functionality/integrations in flutter application development
+Main repository containing all the example apps demonstrating features/functionality/integrations in [Flutter](https://flutter.io/) application development
+
+Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](https://flutter.io/widgets/)] [[Dart Lang](https://flutter.io/bootstrap-into-dart/)]
+
 
 ## Example apps
 
