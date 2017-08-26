@@ -6,6 +6,7 @@ class Second extends StatelessWidget {
     return new Container(
       child: new Center(
         child: new Column(
+          // center the children
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Icon(
