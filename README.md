@@ -22,6 +22,8 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Using HTTP GET](/using_http_get) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_http_get)
 1. [Using Alert Dialog](/using_alert_dialog) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_alert_dialog)
 1. [Using Stepper](/using_stepper) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_stepper)
+1. [Using Tabs](/using_tabs) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_tabs)
+1. [Using Bottom Navigation Bar](/using_bottom_nav_bar) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_bottom_nav_bar)
 
 ### Complete apps with multiple features
 
