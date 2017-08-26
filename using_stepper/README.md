@@ -4,7 +4,8 @@ A material stepper widget that displays progress through a sequence of steps. St
 
 Read [[Documentation](https://docs.flutter.io/flutter/material/Stepper-class.html)] [[Material Design Spec](https://material.io/guidelines/components/steppers.html)]
 
-<img src="demo_img.gif" height="600em" />
+<img src="demo_img.gif" height="600em" /> <img src="demo_img_2.gif" height="600em" />
+
 
 ## Getting Started
 

@@ -51,6 +51,8 @@ class MyHomeState extends State<MyHome> {
         // List the steps you would like to have
         steps: my_steps,
         // Define the type of Stepper style
+        // StepperType.horizontal :  Horizontal Style
+        // StepperType.vertical   :  Vertical Style
         type: StepperType.vertical,
         // Know the step that is tapped
         onStepTapped: (step) {
