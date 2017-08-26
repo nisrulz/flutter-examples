@@ -54,6 +54,12 @@ class MyHomeState extends State<MyHome> {
         type: StepperType.vertical,
         // Know the step that is tapped
         onStepTapped: (step) {
+          // On hitting step itself, change the state and jump to that step
+          setState(() {
+            // update the variable handling the current step value
+            // jump to the tapped step
+            current_step = step;
+          });
           // Log function call
           print("onStepTapped : " + step.toString());
         },
