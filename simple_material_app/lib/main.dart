@@ -13,7 +13,9 @@ void main() {
         ),
         // Body
         body: new Container(
+          // Center the content
           child: new Center(
+            // Add Text
             child: new Text("Hello World!"),
           ),
         ),

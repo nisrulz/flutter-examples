@@ -1,8 +1,10 @@
-# simple_material_app
+# Simple Material App
 
-A new Flutter project.
+A simple material app
+
+<img src="demo_img.jpg" height="600em" />
+
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.io/).

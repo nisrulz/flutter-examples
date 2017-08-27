@@ -1,8 +1,10 @@
-# using_edittext
+# Using Edit Text
 
-A new Flutter project.
+Example app that shows how to use a Edit Text in an app.
+
+<img src="demo_img.gif" height="600em" />
+
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.io/).

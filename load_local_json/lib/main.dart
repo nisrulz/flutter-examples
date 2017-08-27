@@ -30,9 +30,11 @@ class MyAppState extends State<MyApp> {
                     .of(context)
                     .loadString('data_repo/starwars_data.json'),
                 builder: (context, snapshot) {
+                  // Decode the JSON
                   var new_data = JSON.decode(snapshot.data.toString());
 
                   return new ListView.builder(
+                    // Build the ListView
                     itemBuilder: (BuildContext context, int index) {
                       return new Card(
                         child: new Column(

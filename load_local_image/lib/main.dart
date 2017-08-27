@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
         ),
         body: new Container(
           child: new Center(
-            child: new Text("Hellow World!"),
+            child: new Text(
+              "Hello World!",
+              style: new TextStyle(color: Colors.white),
+            ),
           ),
           // Set the image as the background of the Container
           decoration: new BoxDecoration(
