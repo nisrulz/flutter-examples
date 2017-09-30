@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './utils.dart' as utils;
+
 void main() {
   runApp(new MaterialApp(
       // Title
@@ -17,12 +19,10 @@ void main() {
           child: new Center(
             // Add Text
             child: new Text("The quick brown fox jumps over the lazy dog",
+                // Center align text
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                    color: Colors.blueAccent,
-                    fontFamily: 'Pacifico',
-                    fontWeight: FontWeight.w400,
-                    fontSize: 36.0)),
+                // set a text style which defines a custom font
+                style: utils.getCustomFontTextStyle()),
           ),
         ),
       )));

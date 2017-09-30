@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './utils.dart' as utils;
+
 void main() {
   runApp(new MaterialApp(
       // Title
@@ -20,13 +22,8 @@ void main() {
                   "Hello World!",
                 ),
               ),
+              // Set background
               decoration: new BoxDecoration(
-                // Add Gradient
-                gradient: new LinearGradient(
-                    colors: [Colors.lightBlueAccent, Colors.blueAccent],
-                    begin: const FractionalOffset(0.0, 0.0),
-                    end: const FractionalOffset(0.6, 0.0),
-                    stops: [0.0, 0.6],
-                    tileMode: TileMode.clamp),
-              )))));
+                  // Add Gradient
+                  gradient: utils.getCustomGradient())))));
 }
