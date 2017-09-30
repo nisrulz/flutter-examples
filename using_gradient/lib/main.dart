@@ -20,6 +20,7 @@ void main() {
                 // Add Text
                 child: new Text(
                   "Hello World!",
+                  style: new TextStyle(color: Colors.white),
                 ),
               ),
               // Set background

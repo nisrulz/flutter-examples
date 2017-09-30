@@ -1,8 +1,10 @@
-# using_custom_fonts
+# Using Custom Fonts
 
-A new Flutter project.
+Example app showing implementing custom fonts as text style.
+
+<img src="demo_img.jpg" height="600em" />
+
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.io/).
