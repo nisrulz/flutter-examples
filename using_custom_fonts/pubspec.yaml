@@ -48,3 +48,8 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: data_repo/fonts/Pacifico-Regular.ttf
+          weight: 400

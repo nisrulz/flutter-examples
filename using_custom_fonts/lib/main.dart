@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(new MaterialApp(
-    // Title
+      // Title
       title: "Using Custom Fonts",
       // Home
       home: new Scaffold(
@@ -16,7 +16,13 @@ void main() {
           // Center the content
           child: new Center(
             // Add Text
-            child: new Text("The quick brown fox jumps over the lazy dog"),
+            child: new Text("The quick brown fox jumps over the lazy dog",
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    color: Colors.blueAccent,
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 36.0)),
           ),
         ),
       )));
