@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AccountScreen extends StatelessWidget {
-  static String routeName = "/account";
+  static const String routeName = "/account";
 
   @override
   Widget build(BuildContext context) {
