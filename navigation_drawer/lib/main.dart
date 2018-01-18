@@ -7,14 +7,24 @@ void main() {
 class MyDrawerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ListView listView = new ListView(
-      children: <Widget>[
-        getPaddedFirstText("Nav Item 1"),
-        getPaddedText("Nav Item 2"),
-        getPaddedText("Nav Item 3"),
-        getPaddedText("Nav Item 4"),
-      ],
-    );
+    var headerChild = new DrawerHeader(child: new Text("Header"));
+    var aboutChild = new AboutListTile(
+        child: new Text("About"),
+        applicationName: "Application Name",
+        applicationVersion: "v1.0.0",
+        applicationIcon: new Icon(Icons.adb),
+        icon: new Icon(Icons.info));
+
+    var myNavChildren = [
+      headerChild,
+      getNavItem(Icons.settings, "Settings"),
+      getNavItem(Icons.call, "Call"),
+      getNavItem(Icons.home, "Home"),
+      getNavItem(Icons.account_box, "Account"),
+      aboutChild
+    ];
+
+    ListView listView = new ListView(children: myNavChildren);
     Drawer myDrawer = new Drawer(
       child: listView,
     );
@@ -31,15 +41,10 @@ class MyDrawerApp extends StatelessWidget {
     );
   }
 
-  Padding getPaddedFirstText(var data) {
-    return new Padding(
-        child: new Text(data),
-        padding: const EdgeInsets.only(
-            left: 15.0, right: 15.0, bottom: .0, top: 40.0));
-  }
-
-  Padding getPaddedText(var data) {
-    return new Padding(
-        child: new Text(data), padding: const EdgeInsets.all(15.0));
+  ListTile getNavItem(var icon, String s) {
+    return new ListTile(
+      leading: new Icon(icon),
+      title: new Text(s),
+    );
   }
 }
