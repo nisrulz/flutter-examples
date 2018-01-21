@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class First extends StatelessWidget {
+class ThirdTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.orange,
       body: new Container(
         child: new Center(
           child: new Column(
@@ -12,12 +12,12 @@ class First extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Icon(
-                Icons.favorite,
+                Icons.airport_shuttle,
                 size: 160.0,
                 color: Colors.white,
               ),
               new Text(
-                "First Tab",
+                "Third Tab",
                 style: new TextStyle(color: Colors.white),
               )
             ],

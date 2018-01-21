@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import './FirstTab.dart' as first_tab;
-import './SecondTab.dart' as second_tab;
-import './ThirdTab.dart' as third_tab;
+import 'package:using_bottom_nav_bar/tabs/first.dart';
+import 'package:using_bottom_nav_bar/tabs/second.dart';
+import 'package:using_bottom_nav_bar/tabs/third.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -50,11 +49,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
       // Set the TabBar view as the body of the Scaffold
       body: new TabBarView(
         // Add tabs as widgets
-        children: <Widget>[
-          new first_tab.First(),
-          new second_tab.Second(),
-          new third_tab.Third()
-        ],
+        children: <Widget>[new FirstTab(), new SecondTab(), new ThirdTab()],
         // set the controller
         controller: controller,
       ),
