@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(home: new ContactPage()));
+  runApp(new MaterialApp(home: new ContactPage(), debugShowCheckedModeBanner: false,));
 }
 
 class ContactPage extends StatelessWidget {

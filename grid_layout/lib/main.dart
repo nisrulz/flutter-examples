@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: new Scaffold(
         appBar: new AppBar(
           // Here we take the value from the MyHomePage object that was created by

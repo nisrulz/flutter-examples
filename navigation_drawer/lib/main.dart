@@ -5,6 +5,7 @@ import 'package:navigation_drawer/screens/settings.dart';
 
 void main() {
   runApp(new MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: new HomeScreen(), // route for home is '/' implicitly
     routes: <String, WidgetBuilder>{
       // define the routes
