@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:grid_layout/gridview.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
+  final MyGridView myGridView = new MyGridView();
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -12,9 +15,7 @@ class MyApp extends StatelessWidget {
           // the App.build method, and use it to set our appbar title.
           title: new Text("GridView Example"),
         ),
-        body: new Container(
-          child: new Center(child: new Text("Hello World")),
-        ),
+        body: myGridView.build(),
       ),
     );
   }
