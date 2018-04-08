@@ -1,9 +1,9 @@
 # Infinite List
 
-An infinite list using flutter
+Example app showing implemention of an infinite list
 
-## Screencast
-<img src="media/Six.gif" height = "480" width="270">
+<img src="demo_img.gif" height="600em" />
+
 
 ## Getting Started
 

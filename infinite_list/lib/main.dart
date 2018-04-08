@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
 
@@ -9,9 +9,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Infinite List',
       theme: new ThemeData(
-        primaryColorDark: Colors.blue,
-        primaryColorLight: Colors.lightBlue
-      ),
+          primaryColor: Colors.blue, accentColor: Colors.lightBlue),
       home: new RandomWords(),
     );
   }
@@ -46,7 +44,7 @@ class RandomWordsState extends State<RandomWords> {
       new MaterialPageRoute(
         builder: (context) {
           final tiles = _saved.map(
-                (pair) {
+            (pair) {
               return new ListTile(
                 title: new Text(
                   pair.asPascalCase,
@@ -57,9 +55,9 @@ class RandomWordsState extends State<RandomWords> {
           );
           final divided = ListTile
               .divideTiles(
-            context: context,
-            tiles: tiles,
-          )
+                context: context,
+                tiles: tiles,
+              )
               .toList();
 
           return new Scaffold(
