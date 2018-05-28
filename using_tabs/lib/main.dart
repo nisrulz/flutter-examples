@@ -5,7 +5,7 @@ import 'package:using_tabs/tabs/third.dart';
 
 void main() {
   runApp(new MaterialApp(
-      // Title
+    // Title
       title: "Using Tabs",
       // Home
       home: new MyHome()));
@@ -29,7 +29,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     super.initState();
 
     // Initialize the Tab Controller
-    controller = new TabController(length: 2, vsync: this);
+    controller = new TabController(length: 3, vsync: this);
   }
 
   @override
@@ -73,9 +73,9 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        // Appbar
+      // Appbar
         appBar: new AppBar(
-            // Title
+          // Title
             title: new Text("Using Tabs"),
             // Set the background color of the App Bar
             backgroundColor: Colors.blue,
