@@ -17,6 +17,42 @@ class MyApp extends StatelessWidget {
     final TextStyle myTextStyle =
         new TextStyle(color: Colors.grey, fontSize: myTextSize);
 
+    var column = new Column(
+      // Makes the cards stretch in horizontal axis
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        // Setup the card
+        new MyCard(
+            // Setup the text
+            title: new Text(
+              "Favorite",
+              style: myTextStyle,
+            ),
+            // Setup the icon
+            icon:
+                new Icon(Icons.favorite, size: myIconSize, color: Colors.red)),
+        new MyCard(
+            title: new Text(
+              "Alarm",
+              style: myTextStyle,
+            ),
+            icon: new Icon(Icons.alarm, size: myIconSize, color: Colors.blue)),
+        new MyCard(
+            title: new Text(
+              "Airport Shuttle",
+              style: myTextStyle,
+            ),
+            icon: new Icon(Icons.airport_shuttle,
+                size: myIconSize, color: Colors.amber)),
+        new MyCard(
+            title: new Text(
+              "Done",
+              style: myTextStyle,
+            ),
+            icon: new Icon(Icons.done, size: myIconSize, color: Colors.green)),
+      ],
+    );
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Stateless Widget"),
@@ -25,46 +61,11 @@ class MyApp extends StatelessWidget {
         // Sets the padding in the main container
         padding: const EdgeInsets.only(bottom: 2.0),
         child: new Center(
-          child: new Column(
-            // Makes the cards stretch in horizontal axis
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              // Setup the card
-              new MyCard(
-                  // Setup the text
-                  title: new Text(
-                    "Favorite",
-                    style: myTextStyle,
-                  ),
-                  // Setup the icon
-                  icon: new Icon(Icons.favorite,
-                      size: myIconSize, color: Colors.red)),
-              new MyCard(
-                  title: new Text(
-                    "Alarm",
-                    style: myTextStyle,
-                  ),
-                  icon: new Icon(Icons.alarm,
-                      size: myIconSize, color: Colors.blue)),
-              new MyCard(
-                  title: new Text(
-                    "Airport Shuttle",
-                    style: myTextStyle,
-                  ),
-                  icon: new Icon(Icons.airport_shuttle,
-                      size: myIconSize, color: Colors.amber)),
-              new MyCard(
-                  title: new Text(
-                    "Done",
-                    style: myTextStyle,
-                  ),
-                  icon: new Icon(Icons.done,
-                      size: myIconSize, color: Colors.green)),
-            ],
-          ),
+          child: new SingleChildScrollView(child: column),
         ),
       ),
     );
+    ;
   }
 }
 
