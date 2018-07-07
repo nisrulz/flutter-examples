@@ -1,9 +1,11 @@
+import 'dart:async';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'home.dart';
 import 'user.dart';
-import 'dart:async';
 
 void main() {
   runApp(new App());
@@ -18,6 +20,7 @@ class AppState extends State<App> {
   Widget currentPage;
   GoogleSignIn googleSignIn;
   Widget userPage;
+
   @override
   void initState() {
     super.initState();

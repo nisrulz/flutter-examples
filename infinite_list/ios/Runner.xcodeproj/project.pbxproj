@@ -382,7 +382,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.khandelwal.dipansh.infiniteList;
+				PRODUCT_BUNDLE_IDENTIFIER = github.nisrulz.infiniteList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -404,7 +404,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.khandelwal.dipansh.infiniteList;
+				PRODUCT_BUNDLE_IDENTIFIER = github.nisrulz.infiniteList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -1,6 +1,6 @@
-# google_signin
+# Google Signin
 
-A simple flutter app to demonstrate Google signin using Firebase. Register your app on Firebase and enable Google authentication.
+Example app to demonstrate Google signin using Firebase. Register your app on Firebase and enable Google authentication.
 
 ![Initial Page](page1.jpg)
 ![Login Dialog](page2.jpg)
