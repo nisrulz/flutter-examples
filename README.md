@@ -55,7 +55,7 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
 3.  Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
 4.  Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
 5.  Check for existing [issues](https://github.com/nisrulz/flutter-examples/issues) first, before filing an issue.
-6.  Make sure you follow the set standard as all other projects in this repo do
+6.  Make sure you follow the set standard as all other projects in this repo do.
 7.  Have fun!
 
 > P.S. : I saw if you use Adblocker then Gitzip downloads an empty `zip` file, so disable Adblocker to get the correct `zip` file.
