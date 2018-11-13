@@ -34,7 +34,7 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
     // To modify the state of the app, use this method
     setState(() {
       // Get the JSON data
-      var dataConvertedToJSON = JSON.decode(response.body);
+      var dataConvertedToJSON = json.decode(response.body);
       // Extract the required part and assign it to the global variable named data
       data = dataConvertedToJSON['results'];
     });
