@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'dart:convert' show json;
 
 void main() {
   runApp(new MaterialApp(
@@ -34,7 +34,7 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
     // To modify the state of the app, use this method
     setState(() {
       // Get the JSON data
-      var dataConvertedToJSON = JSON.decode(response.body);
+      var dataConvertedToJSON = json.decode(response.body);
       // Extract the required part and assign it to the global variable named data
       data = dataConvertedToJSON['results'];
     });
