@@ -4,6 +4,7 @@ description: A new Flutter project.
 dependencies:
   flutter:
     sdk: flutter
+    http: ^0.12.0
 
 dev_dependencies:
   flutter_test:
