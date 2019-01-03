@@ -49,7 +49,7 @@ class TipCalculator extends StatelessWidget {
                   "Total: \$$total"));
 
           // Show dialog
-          showDialog(context: context, child: dialog);
+          showDialog(context: context, builder: (BuildContext context) => dialog);
         });
 
     Container container = new Container(
