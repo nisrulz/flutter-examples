@@ -32,7 +32,7 @@ class MyHomeState extends State<MyHome> {
                 // On press of the button
                 onPressed: () {
                   // Show dialog
-                  showDialog(context: context, child: dialog);
+                  showDialog(context: context, builder: (BuildContext context) => dialog);
                 }),
           ),
         ));
