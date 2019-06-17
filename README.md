@@ -47,6 +47,12 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 
 1.  [Tip Calculator](/tip_calculator) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/tip_calculator)
 
+### Get flutter packages of all projects
+There is a easy way to get flutter packages of all projects, just run the command as follows:
+```bash
+node ./get_flutter_packages.js
+```
+
 # Pull Requests
 
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
