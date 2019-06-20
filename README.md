@@ -47,6 +47,13 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 
 1.  [Tip Calculator](/tip_calculator) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/tip_calculator)
 
+# Get packages for all flutter projects
+
+- Once you have cloned this repo, navigate to the root of this repo.
+- Next run `./get_packages.sh`
+  > Make sure the script is executable. If it is not, then run `chmod +x get_packages.sh` first to make it executable.
+- Done!
+
 # Pull Requests
 
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
