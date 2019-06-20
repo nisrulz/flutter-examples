@@ -7,13 +7,20 @@
 # Install trash cli
 # brew install trash
 
-# Iterate over each child directory inside the current directory
-echo ""
-for dir in ./*;
+echo "# Deleting build directories..."
+
+# Iterate over each sub-directory inside the current directory
+for DIR in ./*;
 do
-	echo ""
-	echo ">>>> Deleting build directory inside " $dir
-	trash $dir/build/
-	echo ""
-	echo ">>>> Done."
+	# Check if build directory exists inside the $DIR directory
+	# If it does then it is a Flutter project
+	if [ -d "$DIR/build/" ]; then
+		# Update the packages in the project
+		echo ""
+		echo ">>>> Deleting build directory inside " "$DIR"
+		# Run command inside the sub-directory i.e Flutter project
+		(cd "$DIR" && trash build);
+		echo ""
+		echo ">>>> Done."
+	fi
 done
