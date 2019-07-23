@@ -3,14 +3,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
-    home: new MyApp(),
+  runApp(MaterialApp(
+    home: MyApp(),
   ));
 }
 
 class MyApp extends StatefulWidget {
   @override
-  MyAppState createState() => new MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
 class MyAppState extends State<MyApp> {
@@ -18,14 +18,14 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Load local JSON file"),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Load local JSON file"),
         ),
-        body: new Container(
-          child: new Center(
+        body: Container(
+          child: Center(
             // Use future builder and DefaultAssetBundle to load the local JSON file
-            child: new FutureBuilder(
+            child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
                     .loadString('data_repo/starwars_data.json'),
@@ -33,25 +33,25 @@ class MyAppState extends State<MyApp> {
                   // Decode the JSON
                   var new_data = json.decode(snapshot.data.toString());
 
-                  return new ListView.builder(
+                  return ListView.builder(
                     // Build the ListView
                     itemBuilder: (BuildContext context, int index) {
-                      return new Card(
-                        child: new Column(
+                      return Card(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: <Widget>[
-                            new Text("Name: " + new_data[index]['name']),
-                            new Text("Height: " + new_data[index]['height']),
-                            new Text("Mass: " + new_data[index]['mass']),
-                            new Text(
+                            Text("Name: " + new_data[index]['name']),
+                            Text("Height: " + new_data[index]['height']),
+                            Text("Mass: " + new_data[index]['mass']),
+                            Text(
                                 "Hair Color: " + new_data[index]['hair_color']),
-                            new Text(
+                            Text(
                                 "Skin Color: " + new_data[index]['skin_color']),
-                            new Text(
+                            Text(
                                 "Eye Color: " + new_data[index]['eye_color']),
-                            new Text(
+                            Text(
                                 "Birth Year: " + new_data[index]['birth_year']),
-                            new Text("Gender: " + new_data[index]['gender'])
+                            Text("Gender: " + new_data[index]['gender'])
                           ],
                         ),
                       );

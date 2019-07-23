@@ -5,34 +5,34 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       // AppBar
-      appBar: new AppBar(
+      appBar: AppBar(
         // Title
-        title: new Text("About Page"),
+        title: Text("About Page"),
         // App Bar background color
         backgroundColor: Colors.blue,
       ),
       // Body
-      body: new Container(
+      body: Container(
         // Center the content
-        child: new Center(
-          child: new Column(
+        child: Center(
+          child: Column(
             // Center content in the column
             mainAxisAlignment: MainAxisAlignment.center,
             // add children to the column
             children: <Widget>[
               // Text
-              new Text(
+              Text(
                 "About Page\nClick on below icon to goto Home Page",
                 // Setting the style for the Text
-                style: new TextStyle(fontSize: 20.0),
+                style: TextStyle(fontSize: 20.0),
                 // Set text alignment to center
                 textAlign: TextAlign.center,
               ),
               // Icon Button
-              new IconButton(
-                icon: new Icon(
+              IconButton(
+                icon: Icon(
                   Icons.home,
                   color: Colors.red,
                 ),

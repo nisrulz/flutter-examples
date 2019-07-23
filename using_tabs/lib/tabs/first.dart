@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 class First extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      child: new Center(
-        child: new Column(
+    return Container(
+      child: Center(
+        child: Column(
           // center the children
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Icon(
+            Icon(
               Icons.favorite,
               size: 160.0,
               color: Colors.red,
             ),
-            new Text("First Tab")
+            Text("First Tab")
           ],
         ),
       ),

@@ -8,11 +8,11 @@ import 'home.dart';
 import 'user.dart';
 
 void main() {
-  runApp(new App());
+  runApp(App());
 }
 
 class App extends StatefulWidget {
-  AppState createState() => new AppState();
+  AppState createState() => AppState();
 }
 
 class AppState extends State<App> {
@@ -24,7 +24,7 @@ class AppState extends State<App> {
   @override
   void initState() {
     super.initState();
-    userPage = new Home(
+    userPage = Home(
       onSignin: () {
         _signin();
         print("Sign");
@@ -36,11 +36,11 @@ class AppState extends State<App> {
 
   Future<FirebaseUser> _signin() async {
     setState(() {
-      userPage = new Home(onSignin: null, onLogout: _logout, showLoading: true);
+      userPage = Home(onSignin: null, onLogout: _logout, showLoading: true);
     });
     FirebaseAuth _auth = FirebaseAuth.instance;
     try {
-      googleSignIn = new GoogleSignIn();
+      googleSignIn = GoogleSignIn();
       GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
       GoogleSignInAuthentication gauth =
           await googleSignInAccount.authentication;
@@ -51,7 +51,7 @@ class AppState extends State<App> {
 
       setState(() {
         _username = user.displayName;
-        userPage = new User(
+        userPage = User(
           onLogout: _logout,
           user: user,
         );
@@ -67,7 +67,7 @@ class AppState extends State<App> {
   void _logout() async {
     await googleSignIn.signOut();
     setState(() {
-      userPage = new Home(
+      userPage = Home(
         onSignin: () {
           _signin();
           print("Sign");
@@ -82,7 +82,7 @@ class AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       home: userPage,
     );
   }

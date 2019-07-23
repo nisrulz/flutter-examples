@@ -3,22 +3,22 @@ import 'package:flutter/material.dart';
 import './utils.dart' as utils;
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
       // Title
       title: "Using Custom Fonts",
       // Home
-      home: new Scaffold(
+      home: Scaffold(
         // Appbar
-        appBar: new AppBar(
+        appBar: AppBar(
           // Title
-          title: new Text("Using Custom Fonts"),
+          title: Text("Using Custom Fonts"),
         ),
         // Body
-        body: new Container(
+        body: Container(
           // Center the content
-          child: new Center(
+          child: Center(
             // Add Text
-            child: new Text("The quick brown fox jumps over the lazy dog",
+            child: Text("The quick brown fox jumps over the lazy dog",
                 // Center align text
                 textAlign: TextAlign.center,
                 // set a text style which defines a custom font

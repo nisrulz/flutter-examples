@@ -4,16 +4,16 @@ import 'package:using_bottom_nav_bar/tabs/second.dart';
 import 'package:using_bottom_nav_bar/tabs/third.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
       // Title
       title: "Using Tabs",
       // Home
-      home: new MyHome()));
+      home: MyHome()));
 }
 
 class MyHome extends StatefulWidget {
   @override
-  MyHomeState createState() => new MyHomeState();
+  MyHomeState createState() => MyHomeState();
 }
 
 // SingleTickerProviderStateMixin is used for animation
@@ -26,7 +26,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     super.initState();
 
     // Initialize the Tab Controller
-    controller = new TabController(length: 3, vsync: this);
+    controller = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -38,37 +38,37 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       // Appbar
-      appBar: new AppBar(
+      appBar: AppBar(
         // Title
-        title: new Text("Using Bottom Navigation Bar"),
+        title: Text("Using Bottom Navigation Bar"),
         // Set the background color of the App Bar
         backgroundColor: Colors.blue,
       ),
       // Set the TabBar view as the body of the Scaffold
-      body: new TabBarView(
+      body: TabBarView(
         // Add tabs as widgets
-        children: <Widget>[new FirstTab(), new SecondTab(), new ThirdTab()],
+        children: <Widget>[FirstTab(), SecondTab(), ThirdTab()],
         // set the controller
         controller: controller,
       ),
       // Set the bottom navigation bar
-      bottomNavigationBar: new Material(
+      bottomNavigationBar: Material(
         // set the color of the bottom navigation bar
         color: Colors.blue,
         // set the tab bar as the child of bottom navigation bar
-        child: new TabBar(
+        child: TabBar(
           tabs: <Tab>[
-            new Tab(
+            Tab(
               // set icon to the tab
-              icon: new Icon(Icons.favorite),
+              icon: Icon(Icons.favorite),
             ),
-            new Tab(
-              icon: new Icon(Icons.adb),
+            Tab(
+              icon: Icon(Icons.adb),
             ),
-            new Tab(
-              icon: new Icon(Icons.airport_shuttle),
+            Tab(
+              icon: Icon(Icons.airport_shuttle),
             ),
           ],
           // setup the controller

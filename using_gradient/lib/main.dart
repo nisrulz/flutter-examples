@@ -3,28 +3,28 @@ import 'package:flutter/material.dart';
 import './utils.dart' as utils;
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
       // Title
       title: "Using Gradient",
       // Home
-      home: new Scaffold(
+      home: Scaffold(
           // Appbar
-          appBar: new AppBar(
+          appBar: AppBar(
             // Title
-            title: new Text("Using Gradient"),
+            title: Text("Using Gradient"),
           ),
           // Body
-          body: new Container(
+          body: Container(
               // Center the content
-              child: new Center(
+              child: Center(
                 // Add Text
-                child: new Text(
+                child: Text(
                   "Hello World!",
-                  style: new TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
               // Set background
-              decoration: new BoxDecoration(
+              decoration: BoxDecoration(
                   // Add Gradient
                   gradient: utils.getCustomGradient())))));
 }

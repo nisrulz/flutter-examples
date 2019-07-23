@@ -9,15 +9,15 @@ class ContactsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new ListView(
-      padding: new EdgeInsets.symmetric(vertical: 8.0),
+    return ListView(
+      padding: EdgeInsets.symmetric(vertical: 8.0),
       children: _buildContactsList(),
     );
   }
 
   List<ContactListItem> _buildContactsList() {
     return _contactModal
-        .map((contact) => new ContactListItem(contact))
+        .map((contact) => ContactListItem(contact))
         .toList();
   }
 }

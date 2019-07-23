@@ -5,13 +5,13 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Settings"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Settings"),
       ),
-      body: new Container(
-          child: new Center(
-        child: new Text("Settings Screen"),
+      body: Container(
+          child: Center(
+        child: Text("Settings Screen"),
       )),
     );
   }

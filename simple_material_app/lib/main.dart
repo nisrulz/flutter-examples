@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
       // Title
       title: "Simple Material App",
       // Home
-      home: new Scaffold(
+      home: Scaffold(
         // Appbar
-        appBar: new AppBar(
+        appBar: AppBar(
           // Title
-          title: new Text("Simple Material App"),
+          title: Text("Simple Material App"),
         ),
         // Body
-        body: new Container(
+        body: Container(
           // Center the content
-          child: new Center(
+          child: Center(
             // Add Text
-            child: new Text("Hello World!"),
+            child: Text("Hello World!"),
           ),
         ),
       )));

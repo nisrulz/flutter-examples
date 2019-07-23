@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
       // Disable the debug flag
       debugShowCheckedModeBanner: false,
       // Home
-      home: new MyHome()));
+      home: MyHome()));
 }
 
 class MyHome extends StatefulWidget {
   @override
   MyHomeState createState() {
-    return new MyHomeState();
+    return MyHomeState();
   }
 }
 
@@ -67,31 +67,31 @@ class MyHomeState extends State<MyHome> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       // Appbar
-      appBar: new AppBar(
+      appBar: AppBar(
         // Title
-        title: new Text(nameOfApp),
+        title: Text(nameOfApp),
       ),
       // Body
-      body: new Container(
+      body: Container(
         // Center the content
-        child: new Center(
-          child: new Column(
+        child: Center(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Text(
+              Text(
                 '$counter',
                 textScaleFactor: 10.0,
               ),
-              new Padding(padding: new EdgeInsets.all(10.0)),
-              new RaisedButton(
+              Padding(padding: EdgeInsets.all(10.0)),
+              RaisedButton(
                   onPressed: _onIncrementHit,
-                  child: new Text('Increment Counter')),
-              new Padding(padding: new EdgeInsets.all(10.0)),
-              new RaisedButton(
+                  child: Text('Increment Counter')),
+              Padding(padding: EdgeInsets.all(10.0)),
+              RaisedButton(
                   onPressed: _onDecrementHit,
-                  child: new Text('Decrement Counter')),
+                  child: Text('Decrement Counter')),
             ],
           ),
         ),

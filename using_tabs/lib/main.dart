@@ -4,16 +4,16 @@ import 'package:using_tabs/tabs/second.dart';
 import 'package:using_tabs/tabs/third.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
     // Title
       title: "Using Tabs",
       // Home
-      home: new MyHome()));
+      home: MyHome()));
 }
 
 class MyHome extends StatefulWidget {
   @override
-  MyHomeState createState() => new MyHomeState();
+  MyHomeState createState() => MyHomeState();
 }
 
 // SingleTickerProviderStateMixin is used for animation
@@ -29,7 +29,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     super.initState();
 
     // Initialize the Tab Controller
-    controller = new TabController(length: 3, vsync: this);
+    controller = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -40,17 +40,17 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
   }
 
   TabBar getTabBar() {
-    return new TabBar(
+    return TabBar(
       tabs: <Tab>[
-        new Tab(
+        Tab(
           // set icon to the tab
-          icon: new Icon(Icons.favorite),
+          icon: Icon(Icons.favorite),
         ),
-        new Tab(
-          icon: new Icon(Icons.adb),
+        Tab(
+          icon: Icon(Icons.adb),
         ),
-        new Tab(
-          icon: new Icon(Icons.airport_shuttle),
+        Tab(
+          icon: Icon(Icons.airport_shuttle),
         ),
       ],
       // setup the controller
@@ -59,7 +59,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
   }
 
   TabBarView getTabBarView(var tabs) {
-    return new TabBarView(
+    return TabBarView(
       // Add tabs as widgets
       children: tabs,
       // set the controller
@@ -72,16 +72,16 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
    */
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       // Appbar
-        appBar: new AppBar(
+        appBar: AppBar(
           // Title
-            title: new Text("Using Tabs"),
+            title: Text("Using Tabs"),
             // Set the background color of the App Bar
             backgroundColor: Colors.blue,
             // Set the bottom property of the Appbar to include a Tab Bar
             bottom: getTabBar()),
         // Set the TabBar view as the body of the Scaffold
-        body: getTabBarView(<Widget>[new First(), new Second(), new Third()]));
+        body: getTabBarView(<Widget>[First(), Second(), Third()]));
   }
 }

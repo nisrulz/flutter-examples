@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:using_listview/contact_page.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Using Listview"),
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Using Listview"),
       ),
-      body: new ContactPage(),
+      body: ContactPage(),
     ),
   ));
 }

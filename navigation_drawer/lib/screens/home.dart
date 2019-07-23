@@ -4,23 +4,23 @@ import 'package:navigation_drawer/screens/settings.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
-  HomeScreenState createState() => new HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
 class HomeScreenState extends State<HomeScreen> {
   Drawer getNavDrawer(BuildContext context) {
-    var headerChild = new DrawerHeader(child: new Text("Header"));
-    var aboutChild = new AboutListTile(
-        child: new Text("About"),
+    var headerChild = DrawerHeader(child: Text("Header"));
+    var aboutChild = AboutListTile(
+        child: Text("About"),
         applicationName: "Application Name",
         applicationVersion: "v1.0.0",
-        applicationIcon: new Icon(Icons.adb),
-        icon: new Icon(Icons.info));
+        applicationIcon: Icon(Icons.adb),
+        icon: Icon(Icons.info));
 
     ListTile getNavItem(var icon, String s, String routeName) {
-      return new ListTile(
-        leading: new Icon(icon),
-        title: new Text(s),
+      return ListTile(
+        leading: Icon(icon),
+        title: Text(s),
         onTap: () {
           setState(() {
             // pop closes the drawer
@@ -40,22 +40,22 @@ class HomeScreenState extends State<HomeScreen> {
       aboutChild
     ];
 
-    ListView listView = new ListView(children: myNavChildren);
+    ListView listView = ListView(children: myNavChildren);
 
-    return new Drawer(
+    return Drawer(
       child: listView,
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Navigation Drawer Example"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Navigation Drawer Example"),
       ),
-      body: new Container(
-          child: new Center(
-        child: new Text("Home Screen"),
+      body: Container(
+          child: Center(
+        child: Text("Home Screen"),
       )),
       // Set the nav drawer
       drawer: getNavDrawer(context),

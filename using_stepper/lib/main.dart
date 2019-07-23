@@ -1,51 +1,51 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
       // Title
       title: "Simple Material App",
       // Home
-      home: new MyHome()));
+      home: MyHome()));
 }
 
 class MyHome extends StatefulWidget {
   @override
-  MyHomeState createState() => new MyHomeState();
+  MyHomeState createState() => MyHomeState();
 }
 
 class MyHomeState extends State<MyHome> {
   // init the step to 0th position
   int current_step = 0;
   List<Step> my_steps = [
-    new Step(
+    Step(
         // Title of the Step
-        title: new Text("Step 1"),
+        title: Text("Step 1"),
         // Content, it can be any widget here. Using basic Text for this example
-        content: new Text("Hello!"),
+        content: Text("Hello!"),
         isActive: true),
-    new Step(
-        title: new Text("Step 2"),
-        content: new Text("World!"),
+    Step(
+        title: Text("Step 2"),
+        content: Text("World!"),
         // You can change the style of the step icon i.e number, editing, etc.
         state: StepState.editing,
         isActive: true),
-    new Step(
-        title: new Text("Step 3"),
-        content: new Text("Hello World!"),
+    Step(
+        title: Text("Step 3"),
+        content: Text("Hello World!"),
         isActive: true),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       // Appbar
-      appBar: new AppBar(
+      appBar: AppBar(
         // Title
-        title: new Text("Simple Material App"),
+        title: Text("Simple Material App"),
       ),
       // Body
-      body: new Container(
-          child: new Stepper(
+      body: Container(
+          child: Stepper(
         // Using a variable here for handling the currentStep
         currentStep: this.current_step,
         // List the steps you would like to have

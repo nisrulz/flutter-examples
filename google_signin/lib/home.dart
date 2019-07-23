@@ -16,22 +16,22 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(title: new Text("Sign In")),
-      body: new Container(
+    return Scaffold(
+      appBar: AppBar(title: Text("Sign In")),
+      body: Container(
           padding: const EdgeInsets.all(20.0),
-          child: new Center(
-            child: new Column(
+          child: Center(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 showLoading
-                    ? new CircularProgressIndicator()
-                    : new RaisedButton(
+                    ? CircularProgressIndicator()
+                    : RaisedButton(
                         onPressed: this.onSignin,
-                        child: new Text("Sign In"),
+                        child: Text("Sign In"),
                         color: Colors.lightBlueAccent,
                       ),
-                //new RaisedButton(onPressed: this.onLogout, child: new Text("Logout"), color: Colors.amberAccent),
+                //RaisedButton(onPressed: this.onLogout, child: Text("Logout"), color: Colors.amberAccent),
               ],
             ),
           )),

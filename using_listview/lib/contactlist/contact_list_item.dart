@@ -8,9 +8,9 @@ class ContactListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new ListTile(
-        leading: new CircleAvatar(child: new Text(_contactModal.fullName[0])),
-        title: new Text(_contactModal.fullName),
-        subtitle: new Text(_contactModal.email));
+    return ListTile(
+        leading: CircleAvatar(child: Text(_contactModal.fullName[0])),
+        title: Text(_contactModal.fullName),
+        subtitle: Text(_contactModal.email));
   }
 }

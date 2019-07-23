@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
-    home: new MyEditText(),
+  runApp(MaterialApp(
+    home: MyEditText(),
   ));
 }
 
 class MyEditText extends StatefulWidget {
   @override
-  MyEditTextState createState() => new MyEditTextState();
+  MyEditTextState createState() => MyEditTextState();
 }
 
 class MyEditTextState extends State<MyEditText> {
   String results = "";
 
-  final TextEditingController controller = new TextEditingController();
+  final TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Using EditText"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Using EditText"),
         backgroundColor: Colors.red,
       ),
-      body: new Container(
+      body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: new Center(
-          child: new Column(
+        child: Center(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              new TextField(
-                decoration: new InputDecoration(hintText: "Enter text here..."),
+              TextField(
+                decoration: InputDecoration(hintText: "Enter text here..."),
                 onSubmitted: (String str) {
                   setState(() {
                     results = results + "\n" + str;
@@ -39,7 +39,7 @@ class MyEditTextState extends State<MyEditText> {
                 },
                 controller: controller,
               ),
-              new Text(results)
+              Text(results)
             ],
           ),
         ),
