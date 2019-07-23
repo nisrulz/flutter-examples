@@ -39,12 +39,15 @@ class MyHome extends StatelessWidget {
         ),
       ),
 
-      floatingActionButton: new Theme(
+      floatingActionButton: Theme(
         // override the accent color of theme for this widget only
-        data: Theme.of(context).copyWith(accentColor: Colors.pinkAccent),
-        child: new FloatingActionButton(
+        data: Theme.of(context).copyWith(
+          colorScheme:
+              Theme.of(context).colorScheme.copyWith(secondary: Colors.pinkAccent),
+        ),
+        child: FloatingActionButton(
           onPressed: null,
-          child: new Icon(Icons.add),
+          child: Icon(Icons.add),
         ),
       ),
     );
