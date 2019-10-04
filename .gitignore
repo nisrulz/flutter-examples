@@ -348,3 +348,5 @@ playground.xcworkspace
 build/
 
 # End of https://www.gitignore.io/api/dart,swift,xcode,android,intellij,cocoapods,objective-c,androidstudio
+
+**/flutter_export_environment.sh
