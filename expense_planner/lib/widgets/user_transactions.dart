@@ -10,6 +10,7 @@ class UserTransactions extends StatefulWidget {
 }
 
 class _UserTransactionsState extends State<UserTransactions> {
+  Function deleteTx;
   final List<Transaction> _userTransactions = [
     Transaction(
       id: 't1',
@@ -43,7 +44,7 @@ class _UserTransactionsState extends State<UserTransactions> {
     return Column(
       children: <Widget>[
         NewTransaction(_addNewTransaction),
-        TransactionList(_userTransactions),
+        TransactionList(_userTransactions, deleteTx()),
       ],
     );
   }

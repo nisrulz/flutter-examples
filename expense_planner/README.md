@@ -2,6 +2,8 @@
 
 A simple app with a beautiful UI for managing daily expenses.
 
+<img src="demo_img.png" height="600em" />
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

@@ -47,6 +47,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 
 1.  [Tip Calculator](/tip_calculator) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/tip_calculator)
 2. [Expense Planner](/expense_planner) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/expense_planner)
+2. [Notes App](/using_firebase_db) [![download](img/ic_download.png)](https://kinolien.github.com/gitzip/?download=https://github.com/nisrulz/flutter-examples/tree/master/using_firebase_db)
 
 # Get packages for all flutter projects
 
