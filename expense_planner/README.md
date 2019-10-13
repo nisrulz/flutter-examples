@@ -1,6 +1,6 @@
-# expense_planner
+# Expense Planner
 
-A new Flutter project.
+A simple app with a beautiful UI for managing daily expenses.
 
 ## Getting Started
 
