@@ -1,4 +1,4 @@
-package com.example.using_firebase_db;
+package github.nisrulz.using_firebase_db;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

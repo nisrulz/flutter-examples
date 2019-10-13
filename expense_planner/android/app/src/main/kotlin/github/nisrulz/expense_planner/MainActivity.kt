@@ -1,4 +1,4 @@
-package com.example.expense_planner
+package github.nisrulz.expense_planner
 
 import android.os.Bundle
 
