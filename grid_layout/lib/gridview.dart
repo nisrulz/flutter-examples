@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 
 class MyGridView {
-  Card getStructuredGridCell(name, image) {
-    return Card(
-        elevation: 1.5,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.min,
-          verticalDirection: VerticalDirection.down,
-          children: <Widget>[
-            Image(image: AssetImage('data_repo/img/' + image)),
-            Center(
-              child: Text(name),
-            )
-          ],
-        ));
+  GestureDetector getStructuredGridCell(name, image) {
+    // Wrap the child under GestureDetector to setup a on click action
+    return GestureDetector(
+      onTap: () {
+        print("onTap called.");
+      },
+      child: Card(
+          elevation: 1.5,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.min,
+            verticalDirection: VerticalDirection.down,
+            children: <Widget>[
+              Image(image: AssetImage('data_repo/img/' + image)),
+              Center(
+                child: Text(name),
+              )
+            ],
+          )),
+    );
   }
 
   GridView build() {
