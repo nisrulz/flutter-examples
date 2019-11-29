@@ -23,16 +23,11 @@
 
 echo "  🗑  Deleting build directories..."
 
-# Iterate over each sub-directory inside the current directory
-for DIR in ./*;
+# Find all directories with name "build" inside the current directory, recursively
+for FOUND_BUILD_DIR in $(find . -type d -name "build");
 do
-	# Check if build directory exists inside the $DIR directory
-	BUILD_DIR="$DIR/build/"
-	if [ -d $BUILD_DIR ]; then
-		echo "	> Deleting build directory inside " "$DIR"
-		# Run the trash command on build directory
-		trash $BUILD_DIR
-	fi
+	# Run the trash command on found build directory
+	trash $FOUND_BUILD_DIR
 done
 
 echo "  ✔️  Done."
