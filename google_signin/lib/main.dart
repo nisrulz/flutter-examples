@@ -42,12 +42,13 @@ class AppState extends State<App> {
     try {
       googleSignIn = GoogleSignIn();
       GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
-      GoogleSignInAuthentication gauth =
-          await googleSignInAccount.authentication;
-      FirebaseUser user = await _auth.signInWithGoogle(
+      final GoogleSignInAuthentication gauth = await googleSignInAccount.authentication;
+      final AuthCredential credential = GoogleAuthProvider.getCredential(
         accessToken: gauth.accessToken,
         idToken: gauth.idToken,
       );
+      final AuthResult authRes = await _auth.signInWithCredential(credential);
+      final FirebaseUser user = authRes.user;
 
       setState(() {
         _username = user.displayName;
