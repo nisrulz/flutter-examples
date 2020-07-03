@@ -17,7 +17,7 @@ class MyGetHttpData extends StatefulWidget {
 
 // Create the state for our stateful widget
 class MyGetHttpDataState extends State<MyGetHttpData> {
-  final String url = "https://swapi.co/api/people";
+  final String url = "https://swapi.dev/api/people";
   List data;
 
   // Function to get the JSON data
