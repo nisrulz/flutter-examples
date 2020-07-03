@@ -1,5 +1,5 @@
 name: unit_testing
-description: A new Flutter project.
+description: A flutter example app to demonstrate unit testing.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
