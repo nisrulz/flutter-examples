@@ -7,3 +7,27 @@ class TouristPlaces {
     return await PlacesAPI().fetchAllPlaces();
   }
 }
+
+class FormValidator {
+  static String validateEmail(String email) {
+    final pattern = RegExp(
+        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+    if (email.isEmpty) {
+      return "please enter email";
+    } else if (!pattern.hasMatch(email)) {
+      return "please enter valid email";
+    } else {
+      return null;
+    }
+  }
+
+  static String validatePassword(String password) {
+    if (password.isEmpty) {
+      return "please enter your password";
+    } else if (password.length < 8) {
+      return "minimum lenght of password must be 8 characters";
+    } else {
+      return null;
+    }
+  }
+}
