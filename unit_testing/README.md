@@ -1,6 +1,15 @@
 # unit_testing
 
-A new Flutter project.
+A flutter example app to demonstrate unit testing.
+
+<p>
+  <img src="example/exp.gif" width="" height = "300">
+</p>
+
+
+# Unit Test
+
+Unit tests are handy for verifying the behavior of a single function, method, or class. [click here](https://flutter.dev/docs/cookbook/testing/unit/introduction) for more information.
 
 ## Getting Started
 
