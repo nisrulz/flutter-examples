@@ -25,6 +25,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Using EditText](/using_edittext)
 1. [Load local image](/load_local_image)
 1. [Load local json](/load_local_json)
+1. [Unit Testing](/unit_testing)
 1. [Using HTTP GET](/using_http_get)
 1. [Using Alert Dialog](/using_alert_dialog)
 1. [Using Stepper](/using_stepper)
