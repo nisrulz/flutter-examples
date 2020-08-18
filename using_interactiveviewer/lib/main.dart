@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("using InteractiveViewer"),
+          title: Text("Using InteractiveViewer"),
         ),
         body: InteractiveViewer(
           boundaryMargin: EdgeInsets.all(100.0),
