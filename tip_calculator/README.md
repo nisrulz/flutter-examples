@@ -7,4 +7,4 @@ Example app showing implementation which calculates the tip.
 
 ## Getting Started
 
-For help getting started with Flutter, view online [documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.dev/).

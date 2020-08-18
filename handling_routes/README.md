@@ -9,4 +9,4 @@ Read [[Documentation](https://docs.flutter.io/flutter/widgets/Navigator-class.ht
 
 ## Getting Started
 
-For help getting started with Flutter, view online [documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.dev/).

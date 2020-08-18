@@ -7,4 +7,4 @@ Example app showing implementation which loads up an image from a local folder.
 
 ## Getting Started
 
-For help getting started with Flutter, view online [documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.dev/).

@@ -9,4 +9,4 @@ Read [[Documentation](https://docs.flutter.io/flutter/material/TabBar-class.html
 
 ## Getting Started
 
-For help getting started with Flutter, view online [documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.dev/).

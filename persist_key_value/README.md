@@ -6,4 +6,4 @@ Example app showing storing key value on disk using [shared_preference](https://
 
 ## Getting Started
 
-For help getting started with Flutter, view online [documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.dev/).

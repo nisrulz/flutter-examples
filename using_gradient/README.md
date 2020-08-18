@@ -7,4 +7,4 @@ Example app showing implementing gradient as a background.
 
 ## Getting Started
 
-For help getting started with Flutter, view online [documentation](http://flutter.io/).
+For help getting started with Flutter, view online [documentation](http://flutter.dev/).
