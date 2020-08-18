@@ -43,6 +43,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Infinite List](/infinite_list)
 1. [Google Signin](/google_signin)
 1. [Persist Key Value](/persist_key_value)
+1. [Using InteractiveViewer](/using_interactiveviewer)
 
 ### Complete apps with multiple features
 
