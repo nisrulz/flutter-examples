@@ -51,11 +51,16 @@ class MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("Please choose a fruit: "),
-              DropdownButton(
-                value: _selectedFruit,
-                items: _dropDownMenuItems,
-                onChanged: changedDropDownItem,
-              )
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton(
+                    value: _selectedFruit,
+                    items: _dropDownMenuItems,
+                    onChanged: changedDropDownItem,
+                  ),
+                ),
+              ),
             ],
           )),
         ),
