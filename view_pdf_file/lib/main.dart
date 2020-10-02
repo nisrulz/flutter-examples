@@ -1,7 +1,6 @@
-import 'dart:io';
-import 'package:flutter/foundation.dart';
+import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:view_pdf_file/constants.dart';
 import 'package:view_pdf_file/viewPDF.dart';
 
 void main() {
@@ -27,21 +26,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final String url =
-      "https://www.learningcontainer.com/wp-content/uploads/2019/09/sample-pdf-with-images.pdf";
-  String fileName = "";
   bool isLoading = false;
-
-  Future<File> _loadPDFfromURL() async {
-    fileName = url.substring(url.lastIndexOf("/") + 1);
-    var request = await HttpClient().getUrl(Uri.parse(url));
-    var response = await request.close();
-    var bytes = await consolidateHttpClientResponseBytes(response);
-    String dir = (await getApplicationDocumentsDirectory()).path;
-    File file = File("$dir/$fileName");
-    await file.writeAsBytes(bytes);
-    return file;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,34 +36,56 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(
         child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              RaisedButton(
-                onPressed: () async {
-                  setState(() {
-                    isLoading = true;
-                  });
-                  File _file = await _loadPDFfromURL();
-                  setState(() {
-                    isLoading = false;
-                  });
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) =>
-                          ViewPDF(path: _file.path, pdfName: fileName),
+          child: isLoading
+              ? CircularProgressIndicator()
+              : Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    RaisedButton(
+                      onPressed: () async {
+                        setState(() {
+                          isLoading = true;
+                        });
+                        PDFDocument doc =
+                            await PDFDocument.fromAsset('assets/Hello.pdf');
+                        setState(() {
+                          isLoading = false;
+                        });
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => ViewPDF(doc: doc),
+                          ),
+                        );
+                      },
+                      child: Text("Load local PDF"),
                     ),
-                  );
-                },
-                child: isLoading
-                    ? CircularProgressIndicator()
-                    : Text("Load PDF from URL"),
-              ),
-            ],
-          ),
+                    RaisedButton(
+                      onPressed: () async {
+                        setState(() {
+                          isLoading = true;
+                        });
+
+                        ///Update pdf URL from `constansts.dart`
+                        ///change argument passed as per branch
+                        PDFDocument doc =
+                            await PDFDocument.fromURL(Constants.testURL);
+                        setState(() {
+                          isLoading = false;
+                        });
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => ViewPDF(doc: doc),
+                          ),
+                        );
+                      },
+                      child: Text("Load PDF via URL"),
+                    ),
+                  ],
+                ),
         ),
       ),
     );

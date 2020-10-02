@@ -1,20 +1,19 @@
+import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_full_pdf_viewer/full_pdf_viewer_scaffold.dart';
 
 class ViewPDF extends StatelessWidget {
-  final String path;
-  final String pdfName;
+  final PDFDocument doc;
   ViewPDF({
-    @required this.path,
-    @required this.pdfName,
+    @required this.doc,
   });
 
   @override
   Widget build(BuildContext context) {
-    return PDFViewerScaffold(
-        appBar: AppBar(
-          title: Text("$pdfName"),
-        ),
-        path: path);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Example'),
+      ),
+      body: Center(child: PDFViewer(document: doc)),
+    );
   }
 }

@@ -2,7 +2,7 @@
 
 ## Demo
 
-<img src="demo.gif">
+<img src="demo.GIF">
 
 ## Getting Started
 
