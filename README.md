@@ -36,6 +36,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Navigation Drawer](/navigation_drawer)
 1. [Enable Splash Screen](/enabling_splash_screen)
 1. [Using Listview](/using_listview)
+1. [Using ListwheelScrollView](/using_listwheelscrollview)
 1. [Using SnackBar](/using_snackbar)
 1. [Grid Layout](/grid_layout)
 1. [DropDown Button](/dropdown_button)
