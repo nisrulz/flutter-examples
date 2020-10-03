@@ -1,4 +1,4 @@
-package com.example.project
+package github.nisrulz.bottomsheet
 
 import io.flutter.embedding.android.FlutterActivity
 
