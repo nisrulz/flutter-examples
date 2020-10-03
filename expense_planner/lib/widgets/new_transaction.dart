@@ -76,6 +76,8 @@ class _NewTransactionState extends State<NewTransaction> {
               onSubmitted: (_) => _submitData(),
             ),
             Container(
+              height=0;
+            child:Container(
               height: 70,
               child: Row(
                 children: <Widget>[
@@ -85,6 +87,7 @@ class _NewTransactionState extends State<NewTransaction> {
                           ? 'No Date Chosen!'
                           : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}',
                     ),
+                  ),
                   ),
                   FlatButton(
                     textColor: Theme.of(context).primaryColor,
