@@ -350,3 +350,9 @@ build/
 # End of https://www.gitignore.io/api/dart,swift,xcode,android,intellij,cocoapods,objective-c,androidstudio
 
 **/flutter_export_environment.sh
+tip_calculator/.dart_tool/package_config.json
+load_local_json/.dart_tool/package_config.json
+load_local_json/.dart_tool/package_config.json
+load_local_json/.dart_tool/package_config.json
+tip_calculator/.dart_tool/package_config.json
+using_alert_dialog/.dart_tool/package_config.json
