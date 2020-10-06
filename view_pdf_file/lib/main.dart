@@ -27,6 +27,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool isLoading = false;
+  PDFDocument doc;
 
   @override
   Widget build(BuildContext context) {
@@ -44,49 +45,53 @@ class _HomePageState extends State<HomePage> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     RaisedButton(
-                      onPressed: () async {
-                        setState(() {
-                          isLoading = true;
-                        });
-                        PDFDocument doc =
-                            await PDFDocument.fromAsset('assets/Hello.pdf');
-                        setState(() {
-                          isLoading = false;
-                        });
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => ViewPDF(doc: doc),
-                          ),
-                        );
+                      onPressed: () {
+                        loadFromAsset();
                       },
                       child: Text("Load local PDF"),
                     ),
                     RaisedButton(
-                      onPressed: () async {
-                        setState(() {
-                          isLoading = true;
-                        });
-
-                        ///Update pdf URL from `constansts.dart`
-                        ///change argument passed as per branch
-                        PDFDocument doc =
-                            await PDFDocument.fromURL(Constants.testURL);
-                        setState(() {
-                          isLoading = false;
-                        });
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => ViewPDF(doc: doc),
-                          ),
-                        );
+                      onPressed: () {
+                        loadFromURL();
                       },
                       child: Text("Load PDF via URL"),
                     ),
                   ],
                 ),
         ),
+      ),
+    );
+  }
+
+  loadFromAsset() async {
+    setState(() {
+      isLoading = true;
+    });
+    doc = await PDFDocument.fromAsset('assets/Hello.pdf');
+    setState(() {
+      isLoading = false;
+    });
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => ViewPDF(doc: doc),
+      ),
+    );
+  }
+
+  loadFromURL() async {
+    setState(() {
+      isLoading = true;
+    });
+
+    doc = await PDFDocument.fromURL(Constants.pdfURL);
+    setState(() {
+      isLoading = false;
+    });
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => ViewPDF(doc: doc),
       ),
     );
   }
