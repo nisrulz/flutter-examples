@@ -1,4 +1,4 @@
-package com.github.nisrulz.usinglistwheelscrollview
+package github.nisrulz.usinglistwheelscrollview
 
 import io.flutter.embedding.android.FlutterActivity
 
