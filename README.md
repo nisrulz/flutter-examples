@@ -14,7 +14,7 @@ Main repository containing all the example apps demonstrating features/functiona
 
 Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](https://flutter.io/widgets/)] [[Dart Lang](https://flutter.io/bootstrap-into-dart/)]
 
-<img src="stateful_widget/demo_img.gif" height="300em" /> <img src="using_bottom_nav_bar/demo_img.gif" height="300em" /> <img src="dropdown_button/demo_img.gif" height="300em" /> <img src="using_stepper/demo_img.gif" height="300em" /> <img src="using_tabs/demo_img.gif" height="300em" />
+<img src="stateful_widget/demo_img.gif" height="300em" /> <img src="using_bottom_nav_bar/demo_img.gif" height="300em" /> <img src="dropdown_button/demo_img.gif" height="300em" /> <img src="using_stepper/demo_img.gif" height="300em" /> <img src="using_tabs/demo_img.gif" height="300em" /><img src="bottom_sheet/assets/BottomSheetExampleGIF.gif"/>
 
 ## Example apps
 
@@ -44,6 +44,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Google Signin](/google_signin)
 1. [Persist Key Value](/persist_key_value)
 1. [Using InteractiveViewer](/using_interactiveviewer)
+1. [Using Bottom Sheet](/bottom_sheet)
 
 ### Complete apps with multiple features
 
