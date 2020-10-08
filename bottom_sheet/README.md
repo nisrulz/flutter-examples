@@ -2,7 +2,7 @@
 
 Example app showing implementing bottom sheet.
 
-<img src="assets/BottomSheetExampleGIF.gif" height="600em" />
+<img src="demo.gif" height="600em" />
 
 ## Getting Started
 

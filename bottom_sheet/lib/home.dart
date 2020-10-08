@@ -54,7 +54,7 @@ void _openBottomSheet(context) {
               thickness: 2.0,
               height: 10.0,
             ),
-            getListTile(Icons.exit_to_app_rounded, null, "Logout", context),
+            getListTile(Icons.exit_to_app, null, "Logout", context),
           ],
         ),
       );
