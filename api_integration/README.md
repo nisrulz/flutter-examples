@@ -1,6 +1,6 @@
 # API Integration
 
-Example app showing integration of API.\n It fetches the current Indian time from world time API and displays it.
+Example app showing integration of API. It fetches the current Indian time from world time API and displays it in a text widget.
 
 <img src="screenshot.png" height="600em" />
 
