@@ -18,6 +18,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 
 ## Example apps
 
+1. [API integration](/api_integration)
 1. [Simple Material App](/simple_material_app)
 1. [Using Theme](/using_theme)
 1. [Stateless Widgets](/stateless_widgets)
