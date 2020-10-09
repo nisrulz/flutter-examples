@@ -1,6 +1,6 @@
 # API Integration
 
-Example app showing integration of API in app.
+Example app showing integration of world time API in this demo app.
 
 <img src="screenshot.png" height="600em" />
 
