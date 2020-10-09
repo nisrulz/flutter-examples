@@ -51,6 +51,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Tip Calculator](/tip_calculator)
 1. [Expense Planner](/expense_planner)
 1. [Notes App](/using_firebase_db)
+1. [Covid-19 App](/covid19_mobile_app)
 
 # Get packages for all flutter projects
 
