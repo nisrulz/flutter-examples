@@ -1,6 +1,10 @@
 # image_editor
 
-an application to edit imges
+an application to edit images
+
+## Demo
+
+<img src="demo.gif">
 
 ## Getting Started
 
