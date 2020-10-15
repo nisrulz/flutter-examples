@@ -1,4 +1,4 @@
-package com.github.nisrulz.image_editor;
+package github.nisrulz.image_editor;
 
 import io.flutter.embedding.android.FlutterActivity;
 
