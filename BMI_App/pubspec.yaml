@@ -1,0 +1,30 @@
+name: bmi_app
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.3
+  font_awesome_flutter: ^8.10.0
+  url_launcher: ^5.5.0
+  awesome_dialog: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/ic_launcher.png
+    - assets/bmi.png
+    - assets/bmi_chart.png
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: assets/Pacifico-Regular.ttf
