@@ -9,8 +9,10 @@ Main repository containing all the example apps demonstrating features/functiona
 
 ### Featured In
 
-- [Official Flutter Samples](https://github.com/flutter/samples/blob/master/INDEX.md)
+- [Official Flutter Samples](https://github.com/flutter/samples/blob/d500d15c0f098b56e5bd549b32485cedba4843ef/INDEX.md#flutter-examples--)
 - [Flutter Weekly #11](https://mailchi.mp/5db146a7468b/flutter-weekly-11)
+- [Awesome Flutter](https://github.com/Solido/awesome-flutter#demonstrations)
+
 
 Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](https://flutter.io/widgets/)] [[Dart Lang](https://flutter.io/bootstrap-into-dart/)]
 
