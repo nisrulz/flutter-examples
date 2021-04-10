@@ -1,6 +1,9 @@
 name: using_snackbar
 description: Sanck bar implementation in Flutter
 
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+  
 dependencies:
   flutter:
     sdk: flutter

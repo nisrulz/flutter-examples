@@ -1,6 +1,9 @@
 name: enabling_splash_screen
 description: Splash screen in a flutter project
 
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+
 dependencies:
   flutter:
     sdk: flutter

@@ -1,6 +1,9 @@
 name: persist_key_value
 description: Example project to demonstrate storing key value on disk
 
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+  
 dependencies:
   flutter:
     sdk: flutter
