@@ -33,7 +33,7 @@ do
 
 		# Run command inside the sub-directory i.e Gradle project
 		./gradlew clean | egrep 'FAILED|WARNING' 
-		./gradlew wrapper --gradle-version $version --distribution-type all | grep "FAILED"
+		./gradlew wrapper --gradle-version $version --distribution-type bin | grep "FAILED"
 
 		# Print the name of the sub directory when done
 		echo "$DIR" | awk -F'/' '{print $2}' | xargs -I{} echo "      ↪️  {} ✔️"
