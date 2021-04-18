@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "413153147816",
+    "firebase_url": "https://flutter-analytics-daa66.firebaseio.com",
+    "project_id": "flutter-analytics-daa66",
+    "storage_bucket": "flutter-analytics-daa66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413153147816:android:32024a14dd4f7f64c9bb9d",
+        "android_client_info": {
+          "package_name": "github.nisrulz.analytics_integration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413153147816-fm81h383vddsgvgsj3j5qngjtftlidog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIG_c9Nv8CmdbeCFHexfRQO_X4V4Fgj4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413153147816-fm81h383vddsgvgsj3j5qngjtftlidog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
