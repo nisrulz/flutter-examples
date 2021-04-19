@@ -48,7 +48,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Using InteractiveViewer](/using_interactiveviewer)
 1. [Using Bottom Sheet](/bottom_sheet)
 1. [View PDF File](/view_pdf_file)
-
+1. [Image Editor](/image_editor)
 ### Complete apps with multiple features
 
 1. [Tip Calculator](/tip_calculator)
