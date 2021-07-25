@@ -35,15 +35,14 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
     setState(() {
       // Get the JSON data
       var dataConvertedToJSON = json.decode(response.body);
-      try{
-      if(dataConvertedToJSON.statusCode == 200){
-         data = dataConvertedToJSON['results'];
+      try {
+        if (dataConvertedToJSON.statusCode == 200) {
+          // Extract the required part and assign it to the global variable named data
+          data = dataConvertedToJSON['results'];
         }
+      } catch (e) {
+        print(dataConvertedToJSON.statusCode);
       }
-      catch(e){
-      print(dataConvertedToJSON.statusCode);
-      }
-      // Extract the required part and assign it to the global variable named data
     });
 
     return "Successfull";
