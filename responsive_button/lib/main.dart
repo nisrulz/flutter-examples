@@ -129,28 +129,16 @@ class _ResponsiveButtonState extends State<ResponsiveButton>
         scale: _scale,
         child: Container(
           height: 64,
-          padding: const EdgeInsets.symmetric(horizontal: 24),
           width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
             color: widget.color,
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0, 2.0), //(x,y)
-                blurRadius: 2.0,
-              ),
-            ],
           ),
           alignment: Alignment.center,
           child: Text(
             widget.text,
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.center,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
             ),
           ),
         ),
