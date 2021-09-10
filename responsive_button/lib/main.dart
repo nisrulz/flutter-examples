@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Responsive Button Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Responsive Button Demo'),
     );
   }
 }
@@ -31,9 +31,12 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: const Center(
-        child: ResponsiveButton(
-          text: 'Press me',
-          color: Colors.blue,
+        child: Padding(
+          padding: EdgeInsets.all(32.0),
+          child: ResponsiveButton(
+            text: 'Press me',
+            color: Colors.blue,
+          ),
         ),
       ),
     );
@@ -85,7 +88,9 @@ class _ResponsiveButtonState extends State<ResponsiveButton>
 
   void _tapUp(TapUpDetails details) {
     _controller.reverse();
-    // Add widget.onPressed here
+    // If passing a function to button
+    // add widget.onPressed here
+    // e.g. Navigator.of(context).pushNamed('ROUTENAME');
   }
 
   @override
