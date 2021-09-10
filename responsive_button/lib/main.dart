@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Responsive Button Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -62,6 +64,8 @@ class _ResponsiveButtonState extends State<ResponsiveButton>
   late double _scale;
   late AnimationController _controller;
 
+  final snackBar = const SnackBar(content: Text('Button pressed!'));
+
   @override
   void initState() {
     _controller = AnimationController(
@@ -83,14 +87,35 @@ class _ResponsiveButtonState extends State<ResponsiveButton>
   }
 
   void _tapDown(TapDownDetails details) {
+    // Depress button as user presses down
     _controller.forward();
   }
 
   void _tapUp(TapUpDetails details) {
+    // Elevate button as user releases finger
     _controller.reverse();
+
+    // Vibration when user has finished interacting with button
+    HapticFeedback.heavyImpact();
+
     // If passing a function to button
     // add widget.onPressed here
-    // e.g. Navigator.of(context).pushNamed('ROUTENAME');
+
+    // Show top snackbar
+    ScaffoldMessenger.of(context).showMaterialBanner(
+      MaterialBanner(
+        content: const Text('Button pressed!'),
+        leading: const Icon(Icons.info),
+        backgroundColor: Colors.yellow,
+        actions: [
+          TextButton(
+            child: const Text('Dismiss'),
+            onPressed: () =>
+                ScaffoldMessenger.of(context).hideCurrentMaterialBanner(),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
