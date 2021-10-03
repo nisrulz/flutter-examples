@@ -1,0 +1,94 @@
+linter:
+  rules:
+    # STYLE
+    camel_case_types: true
+    camel_case_extensions: true
+    library_names: true
+    file_names: true
+    library_prefixes: true
+    non_constant_identifier_names: true
+    constant_identifier_names: true
+    directives_ordering: true
+    lines_longer_than_80_chars: true
+    curly_braces_in_flow_control_structures: true
+
+    # DOCUMENTATION
+    slash_for_doc_comments: true
+    package_api_docs: true
+    public_member_api_docs: true
+    comment_references: true
+
+    # USAGE
+    implementation_imports: true
+    avoid_relative_lib_imports: true
+    prefer_relative_imports: true
+    prefer_adjacent_string_concatenation: true
+    prefer_interpolation_to_compose_strings: true
+    unnecessary_brace_in_string_interps: true
+    prefer_collection_literals: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+    avoid_function_literals_in_foreach_calls: true
+    prefer_iterable_whereType: true
+    prefer_function_declarations_over_variables: true
+    unnecessary_lambdas: true
+    prefer_equal_for_default_values: true
+    avoid_init_to_null: true
+    unnecessary_getters_setters: true
+    unnecessary_getters: true
+    prefer_expression_function_bodies: true
+    unnecessary_this: true
+    unnecessary_const: true
+    avoid_catches_without_on_clauses: true
+    avoid_catching_errors: true
+    use_rethrow_when_possible: true
+
+    # DESIGN
+    use_to_and_as_if_applicable: true
+    one_member_abstracts: true
+    avoid_classes_with_only_static_members: true
+    prefer_mixin: true
+    prefer_final_fields: true
+    use_setters_to_change_properties: true
+    avoid_setters_without_getters: true
+    avoid_returning_null: true
+    avoid_returning_this: true
+    type_annotate_public_apis: true
+    prefer_typing_uninitialized_variables: true
+#    omit_local_variable_types: true
+    avoid_types_on_closure_parameters: true
+    avoid_return_types_on_setters: true
+    prefer_generic_function_type_aliases: true
+    avoid_private_typedef_functions: true
+    use_function_type_syntax_for_parameters: true
+    avoid_positional_boolean_parameters: true
+    hash_and_equals: true
+    avoid_equals_and_hash_code_on_mutable_classes: true
+    avoid_null_checks_in_equality_operators: true
+
+
+    # PEDANTIC
+    # (duplicated rules are removed)
+    always_declare_return_types: true
+    always_require_non_null_named_parameters: true
+    annotate_overrides: true
+    avoid_empty_else: true
+    avoid_shadowing_type_parameters: true
+    avoid_types_as_parameter_names: true
+    empty_catches: true
+    empty_constructor_bodies: true
+    no_duplicate_case_values: true
+    null_closures: true
+    prefer_conditional_assignment: true
+    prefer_contains: true
+    prefer_for_elements_to_map_fromIterable: true
+    prefer_if_null_operators: true
+#    prefer_single_quotes: true
+    prefer_spread_collections: true
+    recursive_getters: true
+    type_init_formals: true
+    unawaited_futures: true
+    unnecessary_new: true
+    unnecessary_null_in_if_null_operators: true
+    unrelated_type_equality_checks: true
+    valid_regexps: true
