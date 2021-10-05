@@ -2,7 +2,7 @@
 # MealsApp
 
 
-#### My second Flutter Dummy Project. It is an app to show different meals of different countries and suited for different moods and their pictures and how to cook them with proper ingredients and step by step recipes. 
+It is an app to show different meals of different countries and suited for different moods and their pictures and how to cook them with proper ingredients and step by step recipes. 
 
 
 ## How to setup on your system :- 
