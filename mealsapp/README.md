@@ -16,4 +16,12 @@ It is an app to show different meals of different countries and suited for diffe
 2. How to setup the emulator on android studio : https://developer.android.com/studio/run/emulator 
 3. or, connect a physical device : https://stackoverflow.com/questions/54444538/how-do-i-run-test-my-flutter-app-on-a-real-device
 
+## Screenshots
+<p>
+<img src="screenshots/sc_1.jpg" alt="Splash View" width="200">
+<img src="screenshots/sc_2.jpg" alt="Splash View" width="200">
+<img src="screenshots/sc_3.jpg" alt="Splash View" width="200">
+<img src="screenshots/sc_4.jpg" alt="Splash View" width="200">
+<img src="screenshots/sc_5.jpg" alt="Splash View" width="200">
+</p>
 
