@@ -28,7 +28,7 @@ A detailed guide for multiple platforms setup could be find [here](https://flutt
 
 ### Setup Project
 
-- Clone this repository using `git clone https://github.com/RohanSengupta326/mealsApp.git`.
+- Clone this repository using `git clone https://github.com/RohanSengupta326/flutter-examples.git`.
 - `cd` into `mealsApp`.
 - `flutter pub get` to get all the dependencies.
 - Generate files using Builder Runner (**required**) 
