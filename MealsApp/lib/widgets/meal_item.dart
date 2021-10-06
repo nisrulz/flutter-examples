@@ -1,7 +1,7 @@
 // widget for designing region's food items
 
 import 'package:flutter/material.dart';
-import 'package:flutter_proj5meal/screens/meal_details_screen.dart';
+import '../screens/meal_details_screen.dart';
 import '../models/meal.dart';
 
 class MealItem extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:flutter_proj5meal/screens/meal_details_screen.dart';
+import '../screens/meal_details_screen.dart';
 import '../screens/tabs_screen.dart';
 import '../screens/category_meals_screen.dart';
 
@@ -50,21 +50,6 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routes: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
-      // adding routes
-
-      /* onGenerateRoute: (settings) {
-        return MaterialPageRoute(
-          builder: (ctx) => CategoryMealsScreen(),
-        );
-      }, */
-      // if no routes found then go to this route by default => onGenerateRoute
-
-      /* onUnknownRoute: (settings) {
-        return MaterialPageRoute(
-          builder: (ctx) => CategoryMealsScreen(),
-        );
-      }, */
-      // if no route is found go to this route, its like the 404 error route on websites
     );
   }
 }
