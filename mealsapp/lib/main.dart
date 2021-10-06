@@ -20,18 +20,18 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.red,
         canvasColor: Colors.white,
         fontFamily: 'Raleway',
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           color: Colors.red,
           elevation: 6,
         ),
         textTheme: ThemeData.light().textTheme.copyWith(
-              bodyText1: TextStyle(
+              bodyText1: const TextStyle(
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
-              bodyText2: TextStyle(
+              bodyText2: const TextStyle(
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
-              headline1: TextStyle(
+              headline1: const TextStyle(
                   fontSize: 24,
                   fontFamily: 'RobotoCondensed',
                   fontWeight: FontWeight.bold),
