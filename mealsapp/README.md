@@ -1,16 +1,19 @@
-# mealsapp
+# Flutter Meals App
 
-A new Flutter project.
+It is an app to show different meals of different countries and suited for different moods and their pictures and how to cook them with proper ingredients and step by step recipes. 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## How to setup on your system :- 
 
-A few resources to get you started if this is your first Flutter project:
+#### Requirements : 
+ 1. Flutter
+ 2. Android Studio 
+ 3. Emulator/Real Device(Android/IOS)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+#### How to install : 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Check the Official Docs link for installing Flutter : https://flutter.dev/docs/get-started/install 
+2. How to setup the emulator on android studio : https://developer.android.com/studio/run/emulator 
+3. or, connect a physical device : https://stackoverflow.com/questions/54444538/how-do-i-run-test-my-flutter-app-on-a-real-device
+
+
