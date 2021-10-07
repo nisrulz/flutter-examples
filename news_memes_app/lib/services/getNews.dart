@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-final String apikey = 'ab56ec1a9f684d84a541858f59082d84';
+final String apikey = 'YOUR_API_KEY';
 
 Future<List<NewsModel>> showNews() async {
   Uri uri = Uri.parse(
