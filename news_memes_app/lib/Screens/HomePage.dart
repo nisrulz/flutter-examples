@@ -24,26 +24,24 @@ class _HomePageState extends State<HomePage> {
           'News-Memes',
           style: GoogleFonts.gafata(),
         ),
-        actions: [
-          // IconButton(onPressed: (){
-          //   print('Logout pressed');
-          //   final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
-          //   provider.googleLogout();
-          //   Navigator.popUntil(context, (route) => false);
-          //   Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
-          // }, icon: Icon(Icons.logout_rounded)),
-        ],
       ),
       body: Container(
         height: size.height,
         width: size.width,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('images/bg2.gif'), fit: BoxFit.cover)),
+        color: Colors.black,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Image.asset(
+                  'images/breakingnews.jpg',
+                  scale: 4,
+                )),
+            SizedBox(
+              height: 40,
+            ),
             ElevatedButton(
               onPressed: () async {
                 print('Loading news');
@@ -62,7 +60,16 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 70,
+            ),
+            ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Image.asset(
+                  'images/meme.jpg',
+                  scale: 3,
+                )),
+            SizedBox(
+              height: 40,
             ),
             ElevatedButton(
               onPressed: () async {

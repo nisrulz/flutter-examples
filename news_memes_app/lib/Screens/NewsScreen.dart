@@ -24,59 +24,71 @@ class _NewsScreenState extends State<NewsScreen> {
       body: Center(
         child: Center(
           child: InteractiveViewer(
-            child: ListWheelScrollView(
+            child: ListView(
               // magnification: 1.2,
               children: news
-                  .map((e) => Container(
-                        width: size.width * 0.88,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: Colors.white,
-                        ),
-                        child: Column(
-                          children: [
-                            e.imageUrl == 'NoImage'
-                                ? Container(
-                                    height: 40,
-                                    color: Colors.grey,
-                                    child: Text(
-                                      'No Preview Available!',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w300,
-                                        color: Colors.black38,
+                  .map((e) => Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 15, horizontal: 20),
+                        child: Container(
+                          width: size.width * 0.88,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: Colors.white,
+                          ),
+                          child: Column(
+                            children: [
+                              e.imageUrl == 'NoImage'
+                                  ? Container(
+                                      height: 40,
+                                      color: Colors.grey,
+                                      child: Text(
+                                        'No Preview Available!',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w300,
+                                          color: Colors.black38,
+                                        ),
                                       ),
+                                    )
+                                  : Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 10, horizontal: 10),
+                                      child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          child: Image(
+                                              image: NetworkImage(e.imageUrl))),
                                     ),
-                                  )
-                                : Image(image: NetworkImage(e.imageUrl)),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                              child: Text(
-                                e.title,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black54,
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                child: Text(
+                                  e.title,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black54,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                              child: Text(
-                                e.description,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w300,
-                                  color: Colors.black54,
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(10, 0, 10, 20),
+                                child: Text(
+                                  e.description,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.black54,
+                                  ),
                                 ),
-                              ),
-                            )
-                          ],
+                              )
+                            ],
+                          ),
                         ),
                       ))
                   .toList(),
-              itemExtent: 400,
-              diameterRatio: 3,
             ),
           ),
         ),
