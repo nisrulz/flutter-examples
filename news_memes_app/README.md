@@ -13,9 +13,9 @@ An app which shows latest news and funny memes.
 
 
 # ScreenShots:
-[HomePage](demo/sc_1.jpg)
+[HomePage](demo/sc_1.jpeg)
 
-[NewsPage](demo/sc_3.jpg)
+[NewsPage](demo/sc_3.jpeg)
 
-[MemesPage](demo/sc_2.jpg)
+[MemesPage](demo/sc_2.jpeg)
 
