@@ -54,6 +54,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Firebase Crashlytics Integration](/firebase_crash_reporting)
 1. [Push Notifications](/push_notifications)
 1. [Todo list using Provider](/todo_list_using_provider)
+1. [Stateless counter app](/statless_counter_app)
 
 ### Complete apps with multiple features
 
