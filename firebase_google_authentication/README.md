@@ -4,13 +4,13 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  1. Go to firebase console and create an account.
+  2. Now, add an app in the firebase console.
+  3. Give package name as - ''github.nisrulz.firebase_google_authentication'' .
+  4. Now, download the google-services.json file and paste it in android/app directory.
+  5. Now, In the firebase console go to your app and project settings.
+  6. Please add your SHA1 and SHA256 keys in there.
+  7. Now, go to Authentication tab and click on get Started.
+  8. Please enable the Sign-in providers - *Google , *Email/Password  providers.
+  9. Run pub get in your IDE.
+  10. Now, you are good to go.
