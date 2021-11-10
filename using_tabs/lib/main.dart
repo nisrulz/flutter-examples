@@ -22,7 +22,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
    *-------------------- Setup Tabs ------------------*
    */
   // Create a tab controller
-  TabController controller;
+late TabController controller;
 
   @override
   void initState() {
