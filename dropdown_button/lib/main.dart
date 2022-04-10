@@ -23,7 +23,7 @@ class MyAppState extends State<MyApp> {
   }
 
   List<DropdownMenuItem<String>> buildAndGetDropDownMenuItems(List fruits) {
-    List<DropdownMenuItem<String>> items = List();
+    List<DropdownMenuItem<String>> items = [];
     for (String fruit in fruits) {
       items.add(DropdownMenuItem(value: fruit, child: Text(fruit)));
     }
@@ -44,21 +44,19 @@ class MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text("DropDown Button Example"),
         ),
-        body: Container(
-          child: Center(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text("Please choose a fruit: "),
-              DropdownButton(
-                value: _selectedFruit,
-                items: _dropDownMenuItems,
-                onChanged: changedDropDownItem,
-              )
-            ],
-          )),
-        ),
+        body: Center(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("Please choose a fruit: "),
+            DropdownButton(
+              value: _selectedFruit,
+              items: _dropDownMenuItems,
+              onChanged: changedDropDownItem,
+            )
+          ],
+        )),
       ),
     );
   }
