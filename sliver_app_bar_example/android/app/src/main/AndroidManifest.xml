@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sliverappbar.sliver_app_bar_example">
+    package="github.nisrulz.sliver_app_bar_example">
    <application
         android:label="sliver_app_bar_example"
         android:name="${applicationName}"
