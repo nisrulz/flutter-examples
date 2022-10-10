@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("Adaptive Buttons:  "),
+                const Text("Buttons:  "),
                 AdaptiveButton(
                   forcePlatform: selectedPlatform,
                   color: Colors.teal,
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("Adaptive Dialogs:  "),
+                const Text("Dialogs:  "),
                 AdaptiveButton(
                   forcePlatform: selectedPlatform,
                   color: Colors.teal,

@@ -6,6 +6,10 @@ Flutter's flagship feature is it's ability to write code once and have it run on
 
 Pattern is inspired by [this article](https://codewithandrea.com/videos/flutter-platform-aware-widgets-dialogs/)
 
+# Demo
+![android](android-example.jpg)
+![iOS](iOS-example.jpg)
+
 ## Getting Started
 
 For help getting started with Flutter, view online [documentation](http://flutter.dev/).
