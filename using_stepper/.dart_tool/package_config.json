@@ -3,9 +3,9 @@
   "packages": [
     {
       "name": "async",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "boolean_selector",
@@ -15,31 +15,25 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "charcode",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.3.1",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "clock",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "collection",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.16.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "fake_async",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -47,29 +41,35 @@
       "name": "flutter",
       "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_test",
       "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.12",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
+      "name": "material_color_utilities",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/material_color_utilities-0.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
       "name": "meta",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.7.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -81,9 +81,9 @@
     },
     {
       "name": "source_span",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "stack_trace",
@@ -99,31 +99,25 @@
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.1.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "term_glyph",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "typed_data",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.12",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1",
+      "rootUri": "file:///usr/local/Caskroom/flutter/2.8.1/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -134,7 +128,7 @@
       "languageVersion": "2.10"
     }
   ],
-  "generated": "2022-10-22T18:49:51.766148Z",
+  "generated": "2022-10-22T19:15:33.651139Z",
   "generator": "pub",
-  "generatorVersion": "2.15.1"
+  "generatorVersion": "2.18.2"
 }
