@@ -1,4 +1,4 @@
-package com.example.custom_home_drawer
+package github.nisrulz.custom_home_drawer
 
 import io.flutter.embedding.android.FlutterActivity
 

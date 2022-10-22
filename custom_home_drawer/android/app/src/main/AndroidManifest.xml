@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.custom_home_drawer">
+    package="github.nisrulz.custom_home_drawer">
    <application
         android:label="custom_home_drawer"
         android:name="${applicationName}"
