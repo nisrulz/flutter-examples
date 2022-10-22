@@ -54,8 +54,10 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Firebase Crashlytics Integration](/firebase_crash_reporting)
 1. [Push Notifications](/push_notifications)
 1. [Todo list using Provider](/todo_list_using_provider)
+1. [Stateless counter app](/statless_counter_app)
 1. [Sliver App Bar](/sliver_app_bar_example)
 1. [Custom Drawer](/custom_home_drawer)
+
 ### Complete apps with multiple features
 
 1. [Tip Calculator](/tip_calculator)
