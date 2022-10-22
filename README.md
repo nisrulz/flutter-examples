@@ -16,7 +16,7 @@ Main repository containing all the example apps demonstrating features/functiona
 
 Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](https://flutter.io/widgets/)] [[Dart Lang](https://flutter.io/bootstrap-into-dart/)]
 
-<img src="stateful_widget/demo_img.gif" height="300em" /> <img src="using_bottom_nav_bar/demo_img.gif" height="300em" /> <img src="dropdown_button/demo_img.gif" height="300em" /> <img src="using_stepper/demo_img.gif" height="300em" /> <img src="using_tabs/demo_img.gif" height="300em" /><img src="bottom_sheet/demo.gif" height="300em"/>
+<img src="stateful_widget/demo_img.gif" height="300em" /> <img src="using_bottom_nav_bar/demo_img.gif" height="300em" /> <img src="dropdown_button/demo_img.gif" height="300em" /> <img src="using_stepper/demo_img.gif" height="300em" /> <img src="using_tabs/demo_img.gif" height="300em" /><img src="bottom_sheet/demo.gif" height="300em"/><img src="sliver_app_bar_example/demo_img.gif" height="300em" /><img src="custom_home_drawer/demo_img.jpeg" height="300em" />
 
 ## Example apps
 
@@ -55,6 +55,8 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 1. [Push Notifications](/push_notifications)
 1. [Todo list using Provider](/todo_list_using_provider)
 1. [Stateless counter app](/statless_counter_app)
+1. [Sliver App Bar](/sliver_app_bar_example)
+1. [Custom Drawer](/custom_home_drawer)
 
 ### Complete apps with multiple features
 
@@ -72,26 +74,25 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 
 # Pull Requests
 
-I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
+I welcome and encourage all pull requests. It usually will take me 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure the timely addition of your request:
 
 1. Match coding style (braces, spacing, etc.) This is best achieved using `Reformat Code` feature of Android Studio `CMD`+`Option`+`L` on Mac and `CTRL` + `ALT` + `L` on Linux + Windows .
-1. If its a feature, bugfix, or anything please only change code to what you specify.
+1. If it's a feature, bugfix, or anything please only change the code to what you specify.
 1. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
-1. Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
+1. Pull requests _must_ be made against the `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
 1. Check for existing [issues](https://github.com/nisrulz/flutter-examples/issues) first, before filing an issue.
 1. Make sure you follow the set standard as all other projects in this repo do
    > Make sure the package name conforms to the format: `github.nisrulz.<app_name>`
 1. Have fun!
 
-
 ## Extra
-Since the repo is pretty large now , I am sure many folks would like to download only some of the projects. To tackle that follow the steps below:
-  - Install `svn` using homebrew (mac/linux)
+Since the repo is pretty large now, I am sure many folks would like to download only some of the projects. To tackle that follow the steps below:
+  - Install `svn` using homebrew (Mac/Linux)
     ```bash
     brew install svn
     ```
   - Copy the name of the example folder in this repo i.e `simple_material_app`
-  - Next replace `example_folder` in the below command:
+  - Next, replace `example_folder` in the below command:
 
     ```bash
     svn checkout https://github.com/nisrulz/flutter-examples/trunk/example_folder
@@ -106,6 +107,7 @@ Since the repo is pretty large now , I am sure many folks would like to download
 This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io#nishant-srivastava) but hopefully developed and maintained by many others. See the [the list of contributors here](https://github.com/nisrulz/flutter-examples/graphs/contributors).
 
 If you appreciate my work, consider [buying me](https://www.paypal.me/nisrulz/5usd) a cup of :coffee: to keep me recharged :metal: [[PayPal](https://www.paypal.me/nisrulz/5usd)]
+
 
 License
 =======
