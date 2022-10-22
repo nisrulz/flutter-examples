@@ -72,26 +72,25 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 
 # Pull Requests
 
-I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
+I welcome and encourage all pull requests. It usually will take me 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure the timely addition of your request:
 
 1. Match coding style (braces, spacing, etc.) This is best achieved using `Reformat Code` feature of Android Studio `CMD`+`Option`+`L` on Mac and `CTRL` + `ALT` + `L` on Linux + Windows .
-1. If its a feature, bugfix, or anything please only change code to what you specify.
+1. If it's a feature, bugfix, or anything please only change the code to what you specify.
 1. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
-1. Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
+1. Pull requests _must_ be made against the `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
 1. Check for existing [issues](https://github.com/nisrulz/flutter-examples/issues) first, before filing an issue.
 1. Make sure you follow the set standard as all other projects in this repo do
    > Make sure the package name conforms to the format: `github.nisrulz.<app_name>`
 1. Have fun!
 
-
 ## Extra
-Since the repo is pretty large now , I am sure many folks would like to download only some of the projects. To tackle that follow the steps below:
-  - Install `svn` using homebrew (mac/linux)
+Since the repo is pretty large now, I am sure many folks would like to download only some of the projects. To tackle that follow the steps below:
+  - Install `svn` using homebrew (Mac/Linux)
     ```bash
     brew install svn
     ```
   - Copy the name of the example folder in this repo i.e `simple_material_app`
-  - Next replace `example_folder` in the below command:
+  - Next, replace `example_folder` in the below command:
 
     ```bash
     svn checkout https://github.com/nisrulz/flutter-examples/trunk/example_folder
@@ -106,6 +105,7 @@ Since the repo is pretty large now , I am sure many folks would like to download
 This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io#nishant-srivastava) but hopefully developed and maintained by many others. See the [the list of contributors here](https://github.com/nisrulz/flutter-examples/graphs/contributors).
 
 If you appreciate my work, consider [buying me](https://www.paypal.me/nisrulz/5usd) a cup of :coffee: to keep me recharged :metal: [[PayPal](https://www.paypal.me/nisrulz/5usd)]
+
 
 License
 =======
