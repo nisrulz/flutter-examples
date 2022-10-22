@@ -26,7 +26,7 @@ class MyButton extends StatelessWidget {
       // On pressing the raised button
       onPressed: () {
         // show snackbar
-        Scaffold.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               // set content of snackbar
               content: Text("Hello! I am SnackBar :)"),
               // set duration
@@ -36,7 +36,7 @@ class MyButton extends StatelessWidget {
                   label: "Hit Me (Action)",
                   onPressed: () {
                     // When action button is pressed, show another snackbar
-                    Scaffold.of(context).showSnackBar(SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(
                               "Hello! I am shown becoz you pressed Action :)"),
                         ));
