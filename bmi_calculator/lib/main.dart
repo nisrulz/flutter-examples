@@ -1,10 +1,11 @@
-import 'package:bmi_calculator/calculator_page.dart';
+import 'package:bmi_calculator/calculator/calculator_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  // Prevent landscape orientation
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Prevent landscape orientation
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'BMI Calculator',
       home: CalculatorPage(title: 'BMI CALCULATOR'),
     );

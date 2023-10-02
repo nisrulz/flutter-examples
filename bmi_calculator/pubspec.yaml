@@ -22,5 +22,5 @@ flutter:
 
   module:
     androidX: true
-    androidPackage: com.example.bmi_calculator
-    iosBundleIdentifier: com.example.bmiCalculator
+    androidPackage: github.nisrulz.bmi_calculator
+    iosBundleIdentifier: github.nisrulz.bmiCalculator
