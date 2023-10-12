@@ -1,4 +1,4 @@
-package github.nisrulz.push_notifcations;
+package github.nisrulz.push_notifications;
 
 import io.flutter.app.FlutterApplication;
 

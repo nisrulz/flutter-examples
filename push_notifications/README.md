@@ -1,4 +1,4 @@
-# push_notifcations
+# push_notifications
 
 Push notification app demo in Flutter
 
