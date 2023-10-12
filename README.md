@@ -61,6 +61,7 @@ Lookup Links: [[Setup Flutter](https://flutter.io/setup/)] [[Widgets Catalog](ht
 ### Complete apps with multiple features
 
 1. [Covid-19 App](/covid19_mobile_app)
+1. [BMI Calculator](/bmi_calculator)
 1. [Expense Planner](/expense_planner)
 1. [Notes App](/using_firebase_db)
 1. [Tip Calculator](/tip_calculator)
