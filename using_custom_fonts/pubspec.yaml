@@ -2,7 +2,7 @@ name: using_custom_fonts
 description: A new Flutter project.
 
 environment:
-  sdk: ">=2.10.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
