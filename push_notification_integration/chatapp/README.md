@@ -1,4 +1,4 @@
-# chatapp
+# push-notification-integration-chatapp
 
 A new Flutter project on push message integration
 
@@ -18,3 +18,5 @@ Authenticate users in your app using Firebase Authentication.
 Get the device push token for each user's device.
 Store the device push token in your database.
 When a user sends a message to another user, send a push notification to the recipient's device using Firebase Messaging.
+
+![photo_2023-10-15_16-10-05](https://github.com/Nischint2003/flutter-examples/assets/102772703/50ac7e77-0d99-4555-b51c-45037dab452d)
