@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
-import 'package:github.nisrulz.todo_app/signIn.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:github.nisrulz.todo_app/Signin.dart';
 
 class Signup extends StatefulWidget {
-  const Signup({Key? key});
+  const Signup({super.key});
 
   @override
   State<Signup> createState() => _SignupState();
@@ -72,13 +71,10 @@ class _SignupState extends State<Signup> {
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),
-             
               const SizedBox(height: 20),
-           
               SizedBox(
                 height: 20,
               ),
-             
               SizedBox(height: 20),
               Container(
                 width: Get.size.width - 60,

@@ -1,62 +1,66 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:github.nisrulz.todo_app/Home.dart';
 
-class AppTodo extends StatefulWidget {
-  const AppTodo({Key? key}) : super(key: key);
+class Edit extends StatefulWidget {
+  final String taskId;
+  final String initialTitle;
+  final String initialDescription;
+  final String initialTaskType;
+  final String initialCategory;
+
+  const Edit({
+    super.key,
+    required this.taskId,
+    required this.initialTitle,
+    required this.initialDescription,
+    required this.initialTaskType,
+    required this.initialCategory,
+  });
 
   @override
-  State<AppTodo> createState() => _AppTodoState();
+  State<Edit> createState() => _EditState();
 }
 
-class _AppTodoState extends State<AppTodo> {
-  String type = 'food';
-  String SelectedCategory1 = 'important';
-  TextEditingController titleController = TextEditingController();
-  TextEditingController descriptionController = TextEditingController();
+class _EditState extends State<Edit> {
+  late TextEditingController titleController;
+  late TextEditingController descriptionController;
+  String selectedTaskType = '';
+  String selectedCategory = '';
 
-  void saveTodoToFirebase() async {
+  @override
+  void initState() {
+    super.initState();
+    titleController = TextEditingController(text: widget.initialTitle);
+    descriptionController =
+        TextEditingController(text: widget.initialDescription);
+    selectedTaskType = widget.initialTaskType;
+    selectedCategory = widget.initialCategory;
+  }
+
+  void updateTask() async {
     try {
-      final User? user = FirebaseAuth.instance.currentUser;
+      CollectionReference todos =
+          FirebaseFirestore.instance.collection('todos');
 
-      if (user != null) {
-        Map<String, dynamic> todoData = {
-          'title': titleController.text,
-          'description': descriptionController.text,
-          'category': SelectedCategory1,
-          'type': type,
-          'createdAt': Timestamp.now(),
-          'userId': user.uid,
-        };
+      await todos.doc(widget.taskId).update({
+        'title': titleController.text,
+        'description': descriptionController.text,
+        'type': selectedTaskType,
+        'category': selectedCategory,
+      });
 
-        CollectionReference todos =
-            FirebaseFirestore.instance.collection('todos');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Task updated successfully.'),
+        ),
+      );
 
-        await todos.add(todoData);
-
-        titleController.clear();
-        descriptionController.clear();
-
-        Get.snackbar(
-          "Added successfully",
-          "You have added",
-          backgroundColor: Colors.green,
-          snackPosition: SnackPosition.BOTTOM,
-          duration: Duration(seconds: 3),
-        );
-
-        Get.to(() => HomePage());
-      }
+      Navigator.of(context).pop();
     } catch (e) {
-      print('Error: $e');
-      Get.snackbar(
-        "Error",
-        e.toString(),
-        backgroundColor: Colors.red,
-        snackPosition: SnackPosition.BOTTOM,
-        duration: Duration(seconds: 3),
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Failed to update the task: $e'),
+        ),
       );
     }
   }
@@ -65,7 +69,7 @@ class _AppTodoState extends State<AppTodo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create Todo'),
+        title: Text('Edit Task'),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -118,20 +122,20 @@ class _AppTodoState extends State<AppTodo> {
                         children: [
                           ChoiceChip(
                             label: Text('Important'),
-                            selected: SelectedCategory1 == 'important',
+                            selected: selectedTaskType == 'important',
                             onSelected: (selected) {
                               setState(() {
-                                SelectedCategory1 = 'important';
+                                selectedTaskType = 'important';
                               });
                             },
                           ),
                           SizedBox(width: 8),
                           ChoiceChip(
                             label: Text('Planner'),
-                            selected: SelectedCategory1 == 'planner',
+                            selected: selectedTaskType == 'planner',
                             onSelected: (selected) {
                               setState(() {
-                                SelectedCategory1 = 'planner';
+                                selectedTaskType = 'planner';
                               });
                             },
                           ),
@@ -185,37 +189,37 @@ class _AppTodoState extends State<AppTodo> {
                         children: [
                           FilterChip(
                             label: Text('Food'),
-                            selected: type == 'food',
+                            selected: selectedCategory == 'food',
                             onSelected: (selected) {
                               setState(() {
-                                type = 'food';
+                                selectedCategory = 'food';
                               });
                             },
                           ),
                           FilterChip(
                             label: Text('Workout'),
-                            selected: type == 'workout',
+                            selected: selectedCategory == 'workout',
                             onSelected: (selected) {
                               setState(() {
-                                type = 'workout';
+                                selectedCategory = 'workout';
                               });
                             },
                           ),
                           FilterChip(
                             label: Text('Run'),
-                            selected: type == 'run',
+                            selected: selectedCategory == 'run',
                             onSelected: (selected) {
                               setState(() {
-                                type = 'run';
+                                selectedCategory = 'run';
                               });
                             },
                           ),
                           FilterChip(
                             label: Text('Design'),
-                            selected: type == 'design',
+                            selected: selectedCategory == 'design',
                             onSelected: (selected) {
                               setState(() {
-                                type = 'design';
+                                selectedCategory = 'design';
                               });
                             },
                           ),
@@ -229,15 +233,11 @@ class _AppTodoState extends State<AppTodo> {
                 height: 50,
               ),
               Center(
-                child: FloatingActionButton(
-                  backgroundColor: Colors.blue,
-                  onPressed: saveTodoToFirebase,
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
+                child: ElevatedButton(
+                  onPressed: updateTask,
+                  child: Text('Save Changes'),
                 ),
-              )
+              ),
             ],
           ),
         ),

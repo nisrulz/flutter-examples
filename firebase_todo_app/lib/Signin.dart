@@ -1,12 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:github.nisrulz.todo_app/Home.dart';
-import 'package:github.nisrulz.todo_app/signUp.dart';
+import 'package:github.nisrulz.todo_app/Signup.dart';
 
 class Signin extends StatefulWidget {
-  const Signin({Key? key});
+  const Signin({super.key});
 
   @override
   State<Signin> createState() => _SigninState();
@@ -42,7 +41,6 @@ class _SigninState extends State<Signin> {
         duration: Duration(seconds: 3),
       );
 
-     
       Get.to(() => HomePage());
     } catch (e) {
       Get.snackbar(
@@ -74,13 +72,10 @@ class _SigninState extends State<Signin> {
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),
-             
               const SizedBox(height: 20),
-              
               SizedBox(
                 height: 20,
               ),
-             
               SizedBox(height: 20),
               Container(
                 width: Get.size.width - 60,

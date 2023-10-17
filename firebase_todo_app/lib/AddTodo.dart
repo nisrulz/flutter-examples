@@ -1,65 +1,62 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:github.nisrulz.todo_app/Home.dart';
 
-class Edit extends StatefulWidget {
-  final String taskId;
-  final String initialTitle;
-  final String initialDescription;
-  final String initialTaskType;
-  final String initialCategory;
-
-  Edit({
-    required this.taskId,
-    required this.initialTitle,
-    required this.initialDescription,
-    required this.initialTaskType,
-    required this.initialCategory,
-  });
+class AppTodo extends StatefulWidget {
+  const AppTodo({super.key});
 
   @override
-  State<Edit> createState() => _EditState();
+  State<AppTodo> createState() => _AppTodoState();
 }
 
-class _EditState extends State<Edit> {
-  late TextEditingController titleController;
-  late TextEditingController descriptionController;
-  String selectedTaskType = '';
-  String selectedCategory = '';
+class _AppTodoState extends State<AppTodo> {
+  String type = 'food';
+  String SelectedCategory1 = 'important';
+  TextEditingController titleController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
 
-  @override
-  void initState() {
-    super.initState();
-    titleController = TextEditingController(text: widget.initialTitle);
-    descriptionController =
-        TextEditingController(text: widget.initialDescription);
-    selectedTaskType = widget.initialTaskType;
-    selectedCategory = widget.initialCategory;
-  }
-
-  void updateTask() async {
+  void saveTodoToFirebase() async {
     try {
-      CollectionReference todos =
-          FirebaseFirestore.instance.collection('todos');
+      final User? user = FirebaseAuth.instance.currentUser;
 
-      await todos.doc(widget.taskId).update({
-        'title': titleController.text,
-        'description': descriptionController.text,
-        'type': selectedTaskType,
-        'category': selectedCategory,
-      });
+      if (user != null) {
+        Map<String, dynamic> todoData = {
+          'title': titleController.text,
+          'description': descriptionController.text,
+          'category': SelectedCategory1,
+          'type': type,
+          'createdAt': Timestamp.now(),
+          'userId': user.uid,
+        };
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Task updated successfully.'),
-        ),
-      );
+        CollectionReference todos =
+            FirebaseFirestore.instance.collection('todos');
 
-      Navigator.of(context).pop();
+        await todos.add(todoData);
+
+        titleController.clear();
+        descriptionController.clear();
+
+        Get.snackbar(
+          "Added successfully",
+          "You have added",
+          backgroundColor: Colors.green,
+          snackPosition: SnackPosition.BOTTOM,
+          duration: Duration(seconds: 3),
+        );
+
+        Get.to(() => HomePage());
+      }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Failed to update the task: $e'),
-        ),
+      print('Error: $e');
+      Get.snackbar(
+        "Error",
+        e.toString(),
+        backgroundColor: Colors.red,
+        snackPosition: SnackPosition.BOTTOM,
+        duration: Duration(seconds: 3),
       );
     }
   }
@@ -68,7 +65,7 @@ class _EditState extends State<Edit> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Edit Task'),
+        title: Text('Create Todo'),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -121,20 +118,20 @@ class _EditState extends State<Edit> {
                         children: [
                           ChoiceChip(
                             label: Text('Important'),
-                            selected: selectedTaskType == 'important',
+                            selected: SelectedCategory1 == 'important',
                             onSelected: (selected) {
                               setState(() {
-                                selectedTaskType = 'important';
+                                SelectedCategory1 = 'important';
                               });
                             },
                           ),
                           SizedBox(width: 8),
                           ChoiceChip(
                             label: Text('Planner'),
-                            selected: selectedTaskType == 'planner',
+                            selected: SelectedCategory1 == 'planner',
                             onSelected: (selected) {
                               setState(() {
-                                selectedTaskType = 'planner';
+                                SelectedCategory1 = 'planner';
                               });
                             },
                           ),
@@ -188,37 +185,37 @@ class _EditState extends State<Edit> {
                         children: [
                           FilterChip(
                             label: Text('Food'),
-                            selected: selectedCategory == 'food',
+                            selected: type == 'food',
                             onSelected: (selected) {
                               setState(() {
-                                selectedCategory = 'food';
+                                type = 'food';
                               });
                             },
                           ),
                           FilterChip(
                             label: Text('Workout'),
-                            selected: selectedCategory == 'workout',
+                            selected: type == 'workout',
                             onSelected: (selected) {
                               setState(() {
-                                selectedCategory = 'workout';
+                                type = 'workout';
                               });
                             },
                           ),
                           FilterChip(
                             label: Text('Run'),
-                            selected: selectedCategory == 'run',
+                            selected: type == 'run',
                             onSelected: (selected) {
                               setState(() {
-                                selectedCategory = 'run';
+                                type = 'run';
                               });
                             },
                           ),
                           FilterChip(
                             label: Text('Design'),
-                            selected: selectedCategory == 'design',
+                            selected: type == 'design',
                             onSelected: (selected) {
                               setState(() {
-                                selectedCategory = 'design';
+                                type = 'design';
                               });
                             },
                           ),
@@ -232,11 +229,15 @@ class _EditState extends State<Edit> {
                 height: 50,
               ),
               Center(
-                child: ElevatedButton(
-                  onPressed: updateTask,
-                  child: Text('Save Changes'),
+                child: FloatingActionButton(
+                  backgroundColor: Colors.blue,
+                  onPressed: saveTodoToFirebase,
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
+              )
             ],
           ),
         ),

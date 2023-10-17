@@ -2,14 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:github.nisrulz.todo_app/AddTodo.dart';
 import 'package:github.nisrulz.todo_app/Delete.dart';
 import 'package:github.nisrulz.todo_app/Edit.dart';
-import 'package:github.nisrulz.todo_app/signIn.dart';
+import 'package:github.nisrulz.todo_app/Signin.dart';
 
 class HomePage extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  HomePage({super.key});
 
   Future<void> _signOut() async {
     try {
@@ -107,14 +108,10 @@ class HomePage extends StatelessWidget {
                           onPressed: () {
                             Get.to(() => Edit(
                                   taskId: todo.id,
-                                  initialTitle: todo[
-                                      'title'], 
-                                  initialDescription: todo[
-                                      'description'], 
-                                  initialTaskType: todo[
-                                      'type'], 
-                                  initialCategory: todo[
-                                      'category'],
+                                  initialTitle: todo['title'],
+                                  initialDescription: todo['description'],
+                                  initialTaskType: todo['type'],
+                                  initialCategory: todo['category'],
                                 ));
                           },
                           icon: Icon(Icons.edit),
@@ -128,8 +125,6 @@ class HomePage extends StatelessWidget {
                         ),
                         ElevatedButton.icon(
                           onPressed: () {
-                            
-
                             Get.to(() => Delete(taskId: todo.id));
                           },
                           icon: Icon(Icons.delete, color: Colors.red),
