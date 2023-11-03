@@ -80,7 +80,7 @@ I welcome and encourage all pull requests. It usually will take me 24-48 hours t
 1. Match coding style (braces, spacing, etc.) This is best achieved using `Reformat Code` feature of Android Studio `CMD`+`Option`+`L` on Mac and `CTRL` + `ALT` + `L` on Linux + Windows .
 1. If it's a feature, bugfix, or anything please only change the code to what you specify.
 1. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
-1. Pull requests _must_ be made against the `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
+1. Pull requests _must_ be made against the `develop` branch. Any other branch (unless specified by the maintainers) will get rejected. [Here is a link to a good PR made to this repo.](https://github.com/nisrulz/flutter-examples/pull/130)
 1. Check for existing [issues](https://github.com/nisrulz/flutter-examples/issues) first, before filing an issue.
 1. **Make sure you follow the set standard as all other projects in this repo do**
     > **Make sure the package name conforms to the format: `github.nisrulz.<app_name>`**
