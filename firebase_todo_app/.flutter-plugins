@@ -1,0 +1,21 @@
+# This is a generated file; do not edit or check into version control.
+cloud_firestore=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/cloud_firestore-4.9.3/
+cloud_firestore_web=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.7.2/
+firebase_auth=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/firebase_auth-4.10.1/
+firebase_auth_web=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/firebase_auth_web-5.8.2/
+firebase_core=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/firebase_core-2.17.0/
+firebase_core_web=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/firebase_core_web-2.8.0/
+flutter_secure_storage=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.0.0/
+flutter_secure_storage_linux=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.0/
+flutter_secure_storage_macos=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/flutter_secure_storage_macos-3.0.1/
+flutter_secure_storage_web=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/flutter_secure_storage_web-1.1.2/
+flutter_secure_storage_windows=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.0.0/
+google_sign_in=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/google_sign_in-6.1.5/
+google_sign_in_android=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.20/
+google_sign_in_ios=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/google_sign_in_ios-5.6.4/
+google_sign_in_web=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/google_sign_in_web-0.12.0+5/
+path_provider=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/path_provider-2.1.1/
+path_provider_android=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/path_provider_android-2.2.0/
+path_provider_foundation=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.1/
+path_provider_linux=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+path_provider_windows=/Users/nishantsrivastava/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1/
