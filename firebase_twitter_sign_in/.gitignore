@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase Options file generated automatically by firebase
+/lib/firebase_options.dart
