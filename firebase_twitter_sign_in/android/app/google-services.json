@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "651435915042",
+    "project_id": "firebase-twitter-login-upahar",
+    "storage_bucket": "firebase-twitter-login-upahar.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651435915042:android:2936ed840e5c74cbb1577b",
+        "android_client_info": {
+          "package_name": "com.example.firebase_twitter_sign_in"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_XhLYl_TjNND4wZOYGCVyAJEoJPPNd6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651435915042:android:adb3f148ce15563cb1577b",
+        "android_client_info": {
+          "package_name": "github.nisrulz.firebase_twitter_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_XhLYl_TjNND4wZOYGCVyAJEoJPPNd6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
