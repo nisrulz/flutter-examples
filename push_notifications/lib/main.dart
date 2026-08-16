@@ -26,10 +26,10 @@ class _MyHomePageState extends State<MyHomePage> {
   String title = "Title will appear here";
   String messageData = "Message text will appear here";
 
-  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   @override
-  void initState() {
+  Future<void> initState() async {
     super.initState();
 
 /*
@@ -48,30 +48,25 @@ For sending Push notification go to Grow and then cloud messaging, from there se
 and other fields as per requirement
 
 */
-    // In Ios we need to request permission for sending Push notifcations but not in Android
-    _firebaseMessaging.requestNotificationPermissions(
-        const IosNotificationSettings(
-            sound: true, badge: true, alert: true, provisional: true));
+    // Request permission (iOS) and listen for messages.
+    await _firebaseMessaging.requestPermission(
+      alert: true,
+      badge: true,
+      sound: true,
+    );
 
-    _firebaseMessaging.configure(onMessage: (message) async {
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       setState(() {
-        print(message);
-        title = message["notification"]["title"];
-        messageData = message["notification"]["body"];
+        title = message.notification?.title ?? title;
+        messageData = message.notification?.body ?? messageData;
         notification(context, title, messageData);
       });
-    }, onResume: (message) async {
+    });
+
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
       setState(() {
-        print(message);
-        title = message["notification"]["title"];
-        messageData = message["notification"]["body"];
-        notification(context, title, messageData);
-      });
-    }, onLaunch: (message) async {
-      setState(() {
-        print(message);
-        title = message["notification"]["title"];
-        messageData = message["notification"]["body"];
+        title = message.notification?.title ?? title;
+        messageData = message.notification?.body ?? messageData;
         notification(context, title, messageData);
       });
     });
@@ -94,7 +89,9 @@ and other fields as per requirement
                 '$title',
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
-              SizedBox(height: 20.0,),
+              SizedBox(
+                height: 20.0,
+              ),
               Text(
                 messageData,
                 style: Theme.of(context).textTheme.headlineLarge,
