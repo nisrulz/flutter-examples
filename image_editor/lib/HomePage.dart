@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               Spacer(
                 flex: 2,
               ),
-              RaisedButton(
+              ElevatedButton(
                   color: Colors.greenAccent[400],
                   child: Text(
                     'Get_Image', // to select a image from gallery
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
               Spacer(
                 flex: 1,
               ),
-              RaisedButton(
+              ElevatedButton(
                   color: Colors.greenAccent[400],
                   child: Text(
                     'Edit Image', //to start editing the shape, size, etc of the selected image
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
               Spacer(
                 flex: 2,
               ),
-              RaisedButton(
+              ElevatedButton(
                   color: Colors.greenAccent[400],
                   child: Text(
                     'Apply Filters', //to start apply various photo filters to the selected image
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
               Spacer(
                 flex: 1,
               ),
-              RaisedButton(
+              ElevatedButton(
                   color: Colors.greenAccent[400],
                   child: Text(
                     'Download Editted image', //to save the edited  image to gallery
