@@ -36,7 +36,7 @@ class TipCalculator extends StatelessWidget {
         });
 
     // Create button
-    RaisedButton calculateButton = RaisedButton(
+    ElevatedButton calculateButton = ElevatedButton(
         child: Text("Calculate"),
         onPressed: () {
           // Calculate tip and total
