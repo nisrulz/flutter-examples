@@ -10,29 +10,30 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  List _fruits = ["Apple", "Banana", "Pineapple", "Mango", "Grapes"];
+  List<String> _fruits = ["Apple", "Banana", "Pineapple", "Mango", "Grapes"];
 
-  List<DropdownMenuItem<String>> _dropDownMenuItems;
-  String _selectedFruit;
+  late List<DropdownMenuItem<String>> _dropDownMenuItems;
+  late String _selectedFruit;
 
   @override
   void initState() {
     _dropDownMenuItems = buildAndGetDropDownMenuItems(_fruits);
-    _selectedFruit = _dropDownMenuItems[0].value;
+    _selectedFruit = _dropDownMenuItems[0].value!;
     super.initState();
   }
 
-  List<DropdownMenuItem<String>> buildAndGetDropDownMenuItems(List fruits) {
-    List<DropdownMenuItem<String>> items = List();
+  List<DropdownMenuItem<String>> buildAndGetDropDownMenuItems(
+      List<String> fruits) {
+    List<DropdownMenuItem<String>> items = [];
     for (String fruit in fruits) {
       items.add(DropdownMenuItem(value: fruit, child: Text(fruit)));
     }
     return items;
   }
 
-  void changedDropDownItem(String selectedFruit) {
+  void changedDropDownItem(String? selectedFruit) {
     setState(() {
-      _selectedFruit = selectedFruit;
+      _selectedFruit = selectedFruit!;
     });
   }
 
@@ -51,7 +52,7 @@ class MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("Please choose a fruit: "),
-              DropdownButton(
+              DropdownButton<String>(
                 value: _selectedFruit,
                 items: _dropDownMenuItems,
                 onChanged: changedDropDownItem,
