@@ -39,7 +39,7 @@ class MyButtonState extends State<MyButton> {
             children: <Widget>[
               Text(displayedString, style: TextStyle(fontSize: 40.0)),
               Padding(padding: EdgeInsets.all(10.0)),
-              RaisedButton(
+              ElevatedButton(
                 child: Text(
                   "Press me",
                   style: TextStyle(color: Colors.white),
