@@ -29,8 +29,7 @@ class MyApp extends StatelessWidget {
               style: myTextStyle,
             ),
             // Setup the icon
-            icon:
-                Icon(Icons.favorite, size: myIconSize, color: Colors.red)),
+            icon: Icon(Icons.favorite, size: myIconSize, color: Colors.red)),
         MyCard(
             title: Text(
               "Alarm",
@@ -75,7 +74,7 @@ class MyCard extends StatelessWidget {
   final Widget title;
 
   // Constructor. {} here denote that they are optional values i.e you can use as: MyCard()
-  MyCard({this.title, this.icon});
+  MyCard({required this.title, required this.icon});
 
   @override
   Widget build(BuildContext context) {
