@@ -18,7 +18,7 @@ class TransactionList extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'No transactions added yet!',
-                  style: Theme.of(context).textTheme.title,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 SizedBox(
                   height: 20,
@@ -51,14 +51,14 @@ class TransactionList extends StatelessWidget {
                     ),
                     title: Text(
                       transactions[index].title,
-                      style: Theme.of(context).textTheme.title,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                     subtitle: Text(
                       DateFormat.yMMMd().format(transactions[index].date),
                     ),
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
-                      color: Theme.of(context).errorColor,
+                      color: Theme.of(context).colorScheme.error,
                       onPressed: () => deleteTx(transactions[index].id),
                     ),
                   ),
