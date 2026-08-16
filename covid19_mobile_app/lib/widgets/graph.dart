@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:bezier_chart/bezier_chart.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 // Widget that will build the graph
 Widget buildGraph(
     BuildContext context, List<Map<String, dynamic>> datesAndValues) {
-  // Data is avalaible from a particular date and we are getting that here
-  final fromDate = datesAndValues[0]['date'];
-
-  // Data is avalaible until a particular date and we are getting that here
-  final toDate = datesAndValues.last['date'];
-
-  // Add dates and values corresponding to those dates
-  // in a list
-  List<DataPoint<DateTime>> dataPoints = [];
-  for (final dateAndValue in datesAndValues) {
-    dataPoints.add(DataPoint<DateTime>(
-        value: double.parse(dateAndValue['value'].toString()),
-        xAxis: dateAndValue['date']));
+  // Convert the dates and values into chart points.
+  final spots = <FlSpot>[];
+  for (var i = 0; i < datesAndValues.length; i++) {
+    final value = double.parse(datesAndValues[i]['value'].toString());
+    spots.add(FlSpot(i.toDouble(), value));
   }
 
   return Center(
@@ -26,24 +18,22 @@ Widget buildGraph(
       ),
       height: MediaQuery.of(context).size.height / 2,
       width: MediaQuery.of(context).size.width,
-      child: BezierChart(
-        fromDate: fromDate,
-        bezierChartScale: BezierChartScale.WEEKLY,
-        toDate: toDate,
-        selectedDate: toDate,
-        series: [
-          BezierLine(
-            data: dataPoints,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: LineChart(
+          LineChartData(
+            gridData: FlGridData(show: true),
+            titlesData: FlTitlesData(show: true),
+            borderData: FlBorderData(show: true),
+            lineBarsData: [
+              LineChartBarData(
+                spots: spots,
+                isCurved: true,
+                color: Colors.white,
+                belowBarData: BarAreaData(show: false),
+              ),
+            ],
           ),
-        ],
-        config: BezierChartConfig(
-          physics: BouncingScrollPhysics(),
-          verticalIndicatorStrokeWidth: 3.0,
-          verticalIndicatorColor: Colors.black26,
-          showVerticalIndicator: true,
-          verticalIndicatorFixedPosition: false,
-          backgroundColor: Colors.transparent,
-          footerHeight: 30.0,
         ),
       ),
     ),
