@@ -69,17 +69,21 @@ class CountryList extends StatelessWidget {
                       );
                     },
                   ),
-                  innerTopWidget: buildInnerTopWidget(
-                    results[index]['country'],
-                    results[index]['todayCases'].toString(),
-                    results[index]['deaths'].toString(),
-                    results[index]['todayDeaths'].toString(),
-                    results[index]['recovered'].toString(),
-                    results[index]['critical'].toString(),
-                    results[index]['casesPerOneMillion'].toString(),
+                  innerWidget: Column(
+                    children: [
+                      buildInnerTopWidget(
+                        results[index]['country'],
+                        results[index]['todayCases'].toString(),
+                        results[index]['deaths'].toString(),
+                        results[index]['todayDeaths'].toString(),
+                        results[index]['recovered'].toString(),
+                        results[index]['critical'].toString(),
+                        results[index]['casesPerOneMillion'].toString(),
+                      ),
+                      buildInnerBottomWidget(
+                          results[index]['cases'].toString()),
+                    ],
                   ),
-                  innerBottomWidget: buildInnerBottomWidget(
-                      results[index]['cases'].toString()),
                   cellSize: Size(MediaQuery.of(context).size.width, 125),
                   padding: EdgeInsets.all(15),
                   animationDuration: Duration(milliseconds: 300),

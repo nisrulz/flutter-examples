@@ -132,9 +132,11 @@ Widget buildInnerBottomWidget(String cases) {
             child: Text(
               "Close",
             ),
-            color: Colors.black,
-            shape: StadiumBorder(),
-            splashColor: Colors.white.withOpacity(0.5),
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.black,
+              shape: StadiumBorder(),
+              overlayColor: Colors.white.withOpacity(0.5),
+            ),
           ),
         ],
       ),

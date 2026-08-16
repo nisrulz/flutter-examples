@@ -10,7 +10,10 @@ class MyApp extends StatelessWidget {
       title: 'Covid-19',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        accentColor: Color(0xfff4796b),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue,
+          brightness: Brightness.dark,
+        ).copyWith(secondary: Color(0xfff4796b)),
         brightness: Brightness.dark,
       ),
       home: Home(),
