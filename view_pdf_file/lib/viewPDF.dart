@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ViewPDF extends StatelessWidget {
   final PDFDocument doc;
   ViewPDF({
-    @required this.doc,
+    required this.doc,
   });
 
   @override

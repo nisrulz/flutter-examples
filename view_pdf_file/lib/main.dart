@@ -27,7 +27,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool isLoading = false;
-  PDFDocument doc;
+  late PDFDocument doc;
 
   @override
   Widget build(BuildContext context) {
