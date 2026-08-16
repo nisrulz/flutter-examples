@@ -1,5 +1,5 @@
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:view_pdf_file/constants.dart';
 import 'package:view_pdf_file/viewPDF.dart';
 
@@ -27,7 +27,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool isLoading = false;
-  late PDFDocument doc;
+  late Widget pdfViewer;
 
   @override
   Widget build(BuildContext context) {
@@ -67,14 +67,14 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       isLoading = true;
     });
-    doc = await PDFDocument.fromAsset('assets/Hello.pdf');
+    pdfViewer = SfPdfViewer.asset('assets/Hello.pdf');
     setState(() {
       isLoading = false;
     });
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => ViewPDF(doc: doc),
+        builder: (_) => ViewPDF(viewer: pdfViewer),
       ),
     );
   }
@@ -84,14 +84,14 @@ class _HomePageState extends State<HomePage> {
       isLoading = true;
     });
 
-    doc = await PDFDocument.fromURL(Constants.pdfURL);
+    pdfViewer = SfPdfViewer.network(Constants.pdfURL);
     setState(() {
       isLoading = false;
     });
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => ViewPDF(doc: doc),
+        builder: (_) => ViewPDF(viewer: pdfViewer),
       ),
     );
   }

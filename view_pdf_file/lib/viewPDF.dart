@@ -1,10 +1,9 @@
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 
 class ViewPDF extends StatelessWidget {
-  final PDFDocument doc;
+  final Widget viewer;
   ViewPDF({
-    required this.doc,
+    required this.viewer,
   });
 
   @override
@@ -13,7 +12,7 @@ class ViewPDF extends StatelessWidget {
       appBar: AppBar(
         title: Text('Example'),
       ),
-      body: Center(child: PDFViewer(document: doc)),
+      body: Center(child: viewer),
     );
   }
 }
