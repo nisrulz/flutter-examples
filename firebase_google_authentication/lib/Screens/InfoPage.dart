@@ -22,13 +22,15 @@ class _InfoPageState extends State<InfoPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(onPressed: (){
-                  final provider = Provider.of<GoogleSignInProvider>(
-                      context,
-                      listen: false);
-                  provider.googleLogout();
-                },
-                    child: Text('Logout',
+                TextButton(
+                    onPressed: () {
+                      final provider = Provider.of<GoogleSignInProvider>(
+                          context,
+                          listen: false);
+                      provider.googleLogout();
+                    },
+                    child: Text(
+                      'Logout',
                       style: TextStyle(
                         color: Colors.blue,
                         fontSize: 16,
@@ -36,23 +38,23 @@ class _InfoPageState extends State<InfoPage> {
                     )),
               ],
             ),
-            SizedBox(height: 200,),
+            SizedBox(
+              height: 200,
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 40,
-                  backgroundImage: NetworkImage(
-                    user!.photoURL??'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-                  ),
+                  backgroundImage: NetworkImage(user!.photoURL ??
+                      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'),
                 ),
-                SizedBox(height: 15,),
-                Text(user!.email??'',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500
-                  ),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  user!.email ?? '',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
               ],
             )

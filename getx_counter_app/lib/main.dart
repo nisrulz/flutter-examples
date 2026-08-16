@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-//import get package
 import 'package:get/get.dart';
 
 void main() {

@@ -7,7 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class SignUpPage extends StatefulWidget {
-  //const SignUpPage({Key? key}) : super(key: key);
   bool isLogin;
   SignUpPage(this.isLogin);
   @override

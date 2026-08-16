@@ -23,7 +23,6 @@ class LunchApp extends StatelessWidget {
         ),
       ),
       home: Home(),
-      // home: FoodDetailView(),
     );
   }
 }

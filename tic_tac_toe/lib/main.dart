@@ -189,7 +189,6 @@ class _HomePageState extends State<HomePage> {
     if (displayElement[0] == displayElement[1] &&
         displayElement[0] == displayElement[2] &&
         displayElement[0] != '') {
-      //  _showWinDialog(displayElement[0]);
       showWinSnackBar(displayElement[0]);
     }
     if (displayElement[3] == displayElement[4] &&
