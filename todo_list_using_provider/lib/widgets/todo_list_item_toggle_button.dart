@@ -12,7 +12,7 @@ class TodoListItemToggleButton extends StatelessWidget {
       builder: (context, todo, child) {
         print('rebuilding Consumer Todo List Item Toggle Item Button');
 
-        return new RaisedButton(
+        return new ElevatedButton(
           onPressed: (){
             todo.toggle();
           },
