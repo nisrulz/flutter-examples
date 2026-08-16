@@ -18,13 +18,13 @@ class MyGetHttpData extends StatefulWidget {
 // Create the state for our stateful widget
 class MyGetHttpDataState extends State<MyGetHttpData> {
   final String url = "https://swapi.dev/api/people";
-  List data;
+  List? data;
 
   // Function to get the JSON data
   Future<String> getJSONData() async {
     var response = await http.get(
         // Encode the url
-        Uri.encodeFull(url),
+        Uri.parse(url),
         // Only accept JSON response
         headers: {"Accept": "application/json"});
 
@@ -56,7 +56,7 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
       ),
       // Create a Listview and load the data when available
       body: ListView.builder(
-          itemCount: data == null ? 0 : data.length,
+          itemCount: data == null ? 0 : data!.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
               child: Center(
@@ -68,7 +68,7 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
                     child: Container(
                       child: Text(
                         // Read the name field value and set it in the Text widget
-                        data[index]['name'],
+                        data![index]['name'],
                         // set some style to text
                         style: TextStyle(
                             fontSize: 20.0, color: Colors.lightBlueAccent),
