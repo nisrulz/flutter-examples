@@ -2,12 +2,12 @@ name: using_http_get
 description: A new Flutter project.
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.3
+  http: ^1.6.0
   
 dev_dependencies:
   flutter_test:
