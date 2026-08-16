@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.nisrulz.platform_adaptive">
+>
    <application
         android:label="using_platform_adaptive"
         android:name="${applicationName}"
