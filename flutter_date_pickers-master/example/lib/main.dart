@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         data: Theme.of(context).copyWith(
             canvasColor: Colors.blueGrey,
             textTheme: Theme.of(context).textTheme.copyWith(
-                caption: TextStyle(color: Colors.white.withOpacity(0.5)))),
+                bodySmall: TextStyle(color: Colors.white.withOpacity(0.5)))),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: [

@@ -37,9 +37,9 @@ class _RangePickerPageState extends State<RangePickerPage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    selectedPeriodLastColor = Theme.of(context).accentColor;
-    selectedPeriodMiddleColor = Theme.of(context).accentColor;
-    selectedPeriodStartColor = Theme.of(context).accentColor;
+    selectedPeriodLastColor = Theme.of(context).colorScheme.secondary;
+    selectedPeriodMiddleColor = Theme.of(context).colorScheme.secondary;
+    selectedPeriodStartColor = Theme.of(context).colorScheme.secondary;
   }
 
   @override
@@ -92,7 +92,7 @@ class _RangePickerPageState extends State<RangePickerPage> {
               children: <Widget>[
                 Text(
                   "Selected date styles",
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
                 _stylesBlock(),
                 _selectedBlock()

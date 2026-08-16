@@ -84,18 +84,18 @@ class DatePickerStyles {
   /// Return new [DatePickerStyles] object where fields
   /// with null values set with defaults from theme.
   DatePickerStyles fulfillWithTheme(ThemeData theme) {
-    Color accentColor = theme.accentColor;
+    Color accentColor = theme.colorScheme.secondary;
 
     TextStyle? _displayedPeriodTitle =
-        displayedPeriodTitle ?? theme.textTheme.subtitle1;
+        displayedPeriodTitle ?? theme.textTheme.titleMedium;
     TextStyle? _currentDateStyle = currentDateStyle ??
-        theme.textTheme.bodyText1?.copyWith(color: theme.accentColor);
+        theme.textTheme.bodyLarge?.copyWith(color: theme.colorScheme.secondary);
     TextStyle? _disabledDateStyle = disabledDateStyle ??
-        theme.textTheme.bodyText2?.copyWith(color: theme.disabledColor);
+        theme.textTheme.bodyMedium?.copyWith(color: theme.disabledColor);
     TextStyle? _selectedDateStyle =
-        selectedDateStyle ?? theme.accentTextTheme.bodyText1;
+        selectedDateStyle ?? theme.textTheme.bodyLarge;
     TextStyle? _defaultDateTextStyle =
-        defaultDateTextStyle ?? theme.textTheme.bodyText2;
+        defaultDateTextStyle ?? theme.textTheme.bodyMedium;
     BoxDecoration _selectedSingleDateDecoration =
         selectedSingleDateDecoration ??
             BoxDecoration(
@@ -104,7 +104,7 @@ class DatePickerStyles {
 
     DayHeaderStyle? _dayHeaderStyle = dayHeaderStyle;
     if (dayHeaderStyleBuilder == null && _dayHeaderStyle == null) {
-      _dayHeaderStyle = DayHeaderStyle(textStyle: theme.textTheme.caption);
+      _dayHeaderStyle = DayHeaderStyle(textStyle: theme.textTheme.bodySmall);
     }
 
     return DatePickerStyles(
@@ -142,7 +142,7 @@ class DatePickerStyles {
 
   @override
   int get hashCode =>
-     hashValues(
+     Object.hash(
         displayedPeriodTitle,
         currentDateStyle,
         disabledDateStyle,
@@ -210,7 +210,7 @@ class DatePickerRangeStyles extends DatePickerStyles {
   /// where fields with null values set with defaults from given theme.
   @override
   DatePickerRangeStyles fulfillWithTheme(ThemeData theme) {
-    Color accentColor = theme.accentColor;
+    Color accentColor = theme.colorScheme.secondary;
 
     DatePickerStyles commonStyles = super.fulfillWithTheme(theme);
 
@@ -328,7 +328,7 @@ class DatePickerRangeStyles extends DatePickerStyles {
 
   @override
   int get hashCode =>
-     hashValues(
+     Object.hash(
       selectedPeriodStartDecoration,
       selectedPeriodStartTextStyle,
       selectedPeriodLastDecoration,
@@ -353,7 +353,7 @@ class DatePickerRangeStyles extends DatePickerStyles {
 /// User styles for the day header in date picker.
 @immutable
 class DayHeaderStyle {
-  /// If null - textTheme.caption from the Theme will be used.
+  /// If null - textTheme.bodySmall from the Theme will be used.
   final TextStyle? textStyle;
 
   /// If null - no decoration will be applied for the day header;
@@ -379,7 +379,7 @@ class DayHeaderStyle {
   }
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
       textStyle,
       decoration
     );

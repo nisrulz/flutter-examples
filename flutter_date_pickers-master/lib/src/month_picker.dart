@@ -352,7 +352,7 @@ class _MonthPicker extends StatelessWidget {
           selectedDate.year == year && selectedDate.month == month;
 
       BoxDecoration? decoration;
-      TextStyle? itemStyle = themeData.textTheme.bodyText2;
+      TextStyle? itemStyle = themeData.textTheme.bodyMedium;
 
       if (isSelectedMonth) {
         itemStyle = datePickerStyles.selectedDateStyle;

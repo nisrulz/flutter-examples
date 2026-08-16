@@ -35,9 +35,9 @@ class _WeekPickerPageState extends State<WeekPickerPage> {
     super.didChangeDependencies();
 
     // defaults for styles
-    selectedPeriodLastColor = Theme.of(context).accentColor;
-    selectedPeriodMiddleColor = Theme.of(context).accentColor;
-    selectedPeriodStartColor = Theme.of(context).accentColor;
+    selectedPeriodLastColor = Theme.of(context).colorScheme.secondary;
+    selectedPeriodMiddleColor = Theme.of(context).colorScheme.secondary;
+    selectedPeriodStartColor = Theme.of(context).colorScheme.secondary;
   }
 
   @override
@@ -84,7 +84,7 @@ class _WeekPickerPageState extends State<WeekPickerPage> {
               children: <Widget>[
                 Text(
                   "Selected date styles",
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
                 _stylesBlock(),
                 _selectedBlock()
@@ -229,7 +229,7 @@ class _WeekPickerPageState extends State<WeekPickerPage> {
 
     TextStyle? whiteText = Theme.of(context)
         .textTheme
-        .bodyText2
+        .bodyMedium
         ?.copyWith(color: Colors.white);
 
     return isEventDate

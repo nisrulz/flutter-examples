@@ -21,10 +21,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  flutter_material_color_picker:
-    # null-safety fork
-    git:
-      url: git://github.com/Bwolfs2/flutter_material_color_picker.git
+  flutter_material_color_picker: ^1.1.0
   flutter_date_pickers:
     path: ../
 
