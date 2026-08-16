@@ -1,7 +1,8 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/usr/local/Caskroom/flutter/2.8.1/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/nishantsrivastava/Documents/github/flutter-examples/using_listwheelscrollview"
+export "FLUTTER_ROOT=/opt/homebrew/share/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/nishantsrivastava/Personal/Workspaces/github/flutter/flutter-examples/using_listwheelscrollview"
+export "FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH=/Users/nishantsrivastava/Personal/Workspaces/github/flutter/flutter-examples/using_listwheelscrollview/ios/Flutter/ephemeral/Packages/.packages/FlutterFramework"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
