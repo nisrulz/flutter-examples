@@ -10,7 +10,7 @@ import 'package:folding_cell/folding_cell.dart';
 class CountryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<dynamic> results;
+    List<dynamic> results = [];
     return Scaffold(
       drawer: DrawerWidget(),
       appBar: AppBar(
@@ -48,14 +48,15 @@ class CountryList extends StatelessWidget {
               return Container(
                 color: Color(0xFF2e282a),
                 alignment: Alignment.topCenter,
-                child: SimpleFoldingCell(
+                child: SimpleFoldingCell.create(
                   key: _foldingCellKey,
                   frontWidget: Builder(
                     builder: (BuildContext context) {
                       return GestureDetector(
                         onTap: () {
-                          SimpleFoldingCellState foldingCellState =
-                              context.findAncestorStateOfType();
+                          SimpleFoldingCellState? foldingCellState =
+                              context.findAncestorStateOfType<
+                                  SimpleFoldingCellState>();
                           foldingCellState?.toggleFold();
                         },
                         child: Container(

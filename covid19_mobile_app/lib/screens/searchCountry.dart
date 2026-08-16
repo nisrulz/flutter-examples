@@ -50,14 +50,14 @@ class CountrySearchDelegate extends SearchDelegate {
         return Container(
           color: Color(0xFF2e282a),
           alignment: Alignment.topCenter,
-          child: SimpleFoldingCell(
+          child: SimpleFoldingCell.create(
             key: _foldingCellKey,
             frontWidget: Builder(
               builder: (BuildContext context) {
                 return GestureDetector(
                   onTap: () {
-                    SimpleFoldingCellState foldingCellState =
-                        context.findAncestorStateOfType();
+                    SimpleFoldingCellState? foldingCellState =
+                        context.findAncestorStateOfType<SimpleFoldingCellState>();
                     foldingCellState?.toggleFold();
                   },
                   child: Container(
@@ -122,14 +122,14 @@ class CountrySearchDelegate extends SearchDelegate {
         return Container(
           color: Color(0xFF2e282a),
           alignment: Alignment.topCenter,
-          child: SimpleFoldingCell(
+          child: SimpleFoldingCell.create(
             key: _foldingCellKey,
             frontWidget: Builder(
               builder: (BuildContext context) {
                 return GestureDetector(
                   onTap: () {
-                    SimpleFoldingCellState foldingCellState =
-                        context.findAncestorStateOfType();
+                    SimpleFoldingCellState? foldingCellState =
+                        context.findAncestorStateOfType<SimpleFoldingCellState>();
                     foldingCellState?.toggleFold();
                   },
                   child: Container(

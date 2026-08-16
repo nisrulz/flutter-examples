@@ -6,10 +6,10 @@ import 'package:http/http.dart' as http;
 Future getAllData() async {
   try {
     var allCountriesUrl = 'https://corona.lmao.ninja/v2/all';
-    var allCountriesResponse = await http.get(allCountriesUrl);
+    var allCountriesResponse = await http.get(Uri.parse(allCountriesUrl));
 
     var particularCountryUrl = 'https://corona.lmao.ninja/v2/historical/India';
-    var particularCountryResponse = await http.get(particularCountryUrl);
+    var particularCountryResponse = await http.get(Uri.parse(particularCountryUrl));
 
     // a list to store the data points
     List<Map<String, dynamic>> dataPoints = [];
@@ -48,7 +48,7 @@ Future getAllData() async {
 Future getAllCountriesData() async {
   try {
     var url = 'https://corona.lmao.ninja/v2/countries?sort=country';
-    var response = await http.get(url);
+    var response = await http.get(Uri.parse(url));
     return response.body;
   } catch (e) {
     print(e);

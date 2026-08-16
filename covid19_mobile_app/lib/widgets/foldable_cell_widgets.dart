@@ -123,10 +123,10 @@ Widget buildInnerBottomWidget(String cases) {
               fontSize: 20.0,
             ),
           )),
-          FlatButton(
+          TextButton(
             onPressed: () {
-              SimpleFoldingCellState foldingCellState =
-                  context.findAncestorStateOfType();
+              SimpleFoldingCellState? foldingCellState =
+                  context.findAncestorStateOfType<SimpleFoldingCellState>();
               foldingCellState?.toggleFold();
             },
             child: Text(
