@@ -21,7 +21,7 @@ class ContactPage extends StatelessWidget {
 class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton(
       child: Text('Show SnackBar'),
       // On pressing the raised button
       onPressed: () {
