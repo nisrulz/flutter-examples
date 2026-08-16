@@ -7,9 +7,10 @@ void main() {
     // Set the theme's primary color, accent color,
     theme: ThemeData(
       primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
+      colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
+          .copyWith(secondary: Colors.lightGreenAccent),
       // Set background color
-      backgroundColor: Colors.black12,
+      scaffoldBackgroundColor: Colors.black12,
     ),
   ));
 }
@@ -29,11 +30,11 @@ class MyHome extends StatelessWidget {
         child: Center(
           child: Container(
             // use the theme accent color as background color for this widget
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             child: Text(
               'Hello World!',
               // Set text style as per theme
-              style: Theme.of(context).textTheme.title,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
         ),
@@ -42,8 +43,9 @@ class MyHome extends StatelessWidget {
       floatingActionButton: Theme(
         // override the accent color of theme for this widget only
         data: Theme.of(context).copyWith(
-          colorScheme:
-              Theme.of(context).colorScheme.copyWith(secondary: Colors.pinkAccent),
+          colorScheme: Theme.of(context)
+              .colorScheme
+              .copyWith(secondary: Colors.pinkAccent),
         ),
         child: FloatingActionButton(
           onPressed: null,
