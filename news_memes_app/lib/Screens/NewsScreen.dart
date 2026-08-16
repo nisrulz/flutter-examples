@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_memes_app/services/getNews.dart';
 
 class NewsScreen extends StatefulWidget {
-  //const NewsScreen({Key? key}) : super(key: key);
-  List<NewsModel> news;
+  final List<NewsModel> news;
 
   NewsScreen(this.news);
 

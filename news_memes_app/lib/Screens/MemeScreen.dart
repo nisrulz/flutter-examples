@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_memes_app/services/getMemes.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 
 class MemeScreen extends StatefulWidget {
   const MemeScreen({Key? key}) : super(key: key);
@@ -25,14 +24,12 @@ class _MemeScreenState extends State<MemeScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getMeme();
   }
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: Color(0xFF28496E),
         appBar: AppBar(
@@ -44,14 +41,13 @@ class _MemeScreenState extends State<MemeScreen> {
           actions: [
             IconButton(
                 onPressed: () {
-                  Share.share(memeUrl[index]);
+                  SharePlus.instance.share(ShareParams(text: memeUrl[index]));
                 },
                 icon: Icon(Icons.share_rounded))
           ],
         ),
         bottomNavigationBar: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
