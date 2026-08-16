@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.nisrulz.firebase_google_authentication">
+>
    <application
         android:label="firebase_google_authentication"
         android:icon="@mipmap/ic_launcher">

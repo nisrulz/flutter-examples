@@ -140,7 +140,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     width: size.width * 0.8,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(29),
-                      child: FlatButton(
+                      child: TextButton(
                         padding:
                         EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         onPressed: () {
@@ -168,7 +168,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     width: size.width * 0.81,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(29),
-                      child: FlatButton.icon(
+                      child: TextButton.icon(
                         padding:
                         EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         onPressed: () {

@@ -22,7 +22,7 @@ class _InfoPageState extends State<InfoPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                FlatButton(onPressed: (){
+                TextButton(onPressed: (){
                   final provider = Provider.of<GoogleSignInProvider>(
                       context,
                       listen: false);

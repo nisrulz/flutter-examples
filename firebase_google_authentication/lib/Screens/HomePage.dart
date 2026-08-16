@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
               width: size.width*0.8,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(29),
-                child: FlatButton(
+                child: TextButton(
                   padding: EdgeInsets.symmetric(vertical: 15,horizontal: 40),
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage(true)));
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
           width: size.width*0.8,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(29),
-            child: FlatButton(
+            child: TextButton(
               padding: EdgeInsets.symmetric(vertical: 15,horizontal: 40),
               onPressed: (){
                 Navigator.push(context,
