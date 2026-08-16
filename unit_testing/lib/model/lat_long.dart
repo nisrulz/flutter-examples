@@ -1,5 +1,5 @@
 class LatLong {
   final double latitude;
   final double longitude;
-  LatLong({this.latitude, this.longitude});
+  LatLong({required this.latitude, required this.longitude});
 }

@@ -3,7 +3,7 @@ import 'package:unit_testing/model/location.dart';
 
 class PlaceInfo extends StatelessWidget {
   final Location data;
-  PlaceInfo({this.data});
+  PlaceInfo({required this.data});
 
   @override
   Widget build(BuildContext context) {

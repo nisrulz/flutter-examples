@@ -9,10 +9,10 @@ class TouristPlaces {
 }
 
 class FormValidator {
-  static String validateEmail(String email) {
+  static String? validateEmail(String? email) {
     final pattern = RegExp(
         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-    if (email.isEmpty) {
+    if (email == null || email.isEmpty) {
       return "please enter email";
     } else if (!pattern.hasMatch(email)) {
       return "please enter valid email";
@@ -21,8 +21,8 @@ class FormValidator {
     }
   }
 
-  static String validatePassword(String password) {
-    if (password.isEmpty) {
+  static String? validatePassword(String? password) {
+    if (password == null || password.isEmpty) {
       return "please enter your password";
     } else if (password.length < 8) {
       return "minimum lenght of password must be 8 characters";
