@@ -3,19 +3,19 @@
   "packages": [
     {
       "name": "async",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/async-2.11.0",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/async-2.13.1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.4"
     },
     {
       "name": "boolean_selector",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/boolean_selector-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.1"
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/characters-1.4.0",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/characters-1.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -41,13 +41,13 @@
       "name": "flutter",
       "rootUri": "file:///opt/homebrew/share/flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "3.8"
+      "languageVersion": "3.11"
     },
     {
       "name": "flutter_test",
       "rootUri": "file:///opt/homebrew/share/flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "3.8"
+      "languageVersion": "3.11"
     },
     {
       "name": "leak_tracker",
@@ -69,19 +69,19 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/matcher-0.12.17",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/matcher-0.12.20",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.10"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/material_color_utilities-0.13.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.5"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/meta-1.17.0",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/meta-1.19.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -95,13 +95,13 @@
       "name": "sky_engine",
       "rootUri": "file:///opt/homebrew/share/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "3.8"
+      "languageVersion": "3.11"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/source_span-1.10.0",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/source_span-1.10.2",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.1"
     },
     {
       "name": "stack_trace",
@@ -117,31 +117,31 @@
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.18"
-    },
-    {
-      "name": "term_glyph",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "test_api",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/test_api-0.7.7",
-      "packageUri": "lib/",
-      "languageVersion": "3.5"
-    },
-    {
-      "name": "vector_math",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/vector_math-2.2.0",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/string_scanner-1.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
+      "name": "term_glyph",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/term_glyph-1.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "test_api",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/test_api-0.7.12",
+      "packageUri": "lib/",
+      "languageVersion": "3.10"
+    },
+    {
+      "name": "vector_math",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/vector_math-2.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.10"
+    },
+    {
       "name": "vm_service",
-      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/vm_service-15.0.2",
+      "rootUri": "file:///Users/nishantsrivastava/.pub-cache/hosted/pub.dev/vm_service-15.2.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -149,12 +149,12 @@
       "name": "load_local_image",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.10.3",
+  "generatorVersion": "3.13.0",
   "flutterRoot": "file:///opt/homebrew/share/flutter",
-  "flutterVersion": "3.38.4",
+  "flutterVersion": "3.47.0",
   "pubCache": "file:///Users/nishantsrivastava/.pub-cache"
 }
