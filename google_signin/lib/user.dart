@@ -1,39 +1,43 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
-class User extends StatelessWidget {
-  User({Key key, @required this.onLogout, @required this.user})
-      : super(key: key);
+class UserProfile extends StatelessWidget {
+  const UserProfile({
+    super.key,
+    required this.onLogout,
+    required this.user,
+  });
 
-  VoidCallback onLogout;
-  String username;
-  FirebaseUser user;
+  final VoidCallback onLogout;
+  final User user;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Welcome"),
+        title: const Text("Welcome"),
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.exit_to_app), onPressed: this.onLogout)
+            icon: const Icon(Icons.exit_to_app),
+            onPressed: onLogout,
+          ),
         ],
       ),
       body: Container(
-          padding: const EdgeInsets.all(20.0),
-          child: Center(
-              child: Column(
+        padding: const EdgeInsets.all(20.0),
+        child: Center(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.network(user.photoUrl),
+              Image.network(user.photoURL ?? ''),
               Text(
-                user.displayName,
-                textScaleFactor: 1.5,
+                user.displayName ?? '',
+                textScaler: const TextScaler.linear(1.5),
               ),
             ],
-          ))),
+          ),
+        ),
+      ),
     );
   }
 }

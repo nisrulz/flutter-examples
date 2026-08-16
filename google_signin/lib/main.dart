@@ -8,71 +8,62 @@ import 'home.dart';
 import 'user.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatefulWidget {
+  const App({super.key});
+
+  @override
   AppState createState() => AppState();
 }
 
 class AppState extends State<App> {
-  String _username = "";
-  Widget currentPage;
-  GoogleSignIn googleSignIn;
-  Widget userPage;
+  final GoogleSignIn googleSignIn = GoogleSignIn.instance;
+  late Widget userPage;
 
   @override
   void initState() {
     super.initState();
     userPage = Home(
-      onSignin: () {
-        _signin();
-        print("Sign");
-      },
+      onSignin: _signin,
       onLogout: _logout,
       showLoading: false,
     );
   }
 
-  Future<FirebaseUser> _signin() async {
+  Future<User?> _signin() async {
     setState(() {
       userPage = Home(onSignin: null, onLogout: _logout, showLoading: true);
     });
-    FirebaseAuth _auth = FirebaseAuth.instance;
     try {
-      googleSignIn = GoogleSignIn();
-      GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
-      final GoogleSignInAuthentication gauth = await googleSignInAccount.authentication;
-      final AuthCredential credential = GoogleAuthProvider.getCredential(
-        accessToken: gauth.accessToken,
-        idToken: gauth.idToken,
+      await googleSignIn.initialize();
+      final GoogleSignInAccount account = await googleSignIn.authenticate();
+      final GoogleSignInAuthentication auth = account.authentication;
+      final AuthCredential credential = GoogleAuthProvider.credential(
+        idToken: auth.idToken,
       );
-      final AuthResult authRes = await _auth.signInWithCredential(credential);
-      final FirebaseUser user = authRes.user;
+      final UserCredential authRes =
+          await FirebaseAuth.instance.signInWithCredential(credential);
+      final User? user = authRes.user;
+      if (user == null) return null;
 
       setState(() {
-        _username = user.displayName;
-        userPage = User(
-          onLogout: _logout,
-          user: user,
-        );
+        userPage = UserProfile(onLogout: _logout, user: user);
       });
 
       return user;
     } catch (e) {
       print(e.toString());
+      return null;
     }
-    return null;
   }
 
-  void _logout() async {
+  Future<void> _logout() async {
     await googleSignIn.signOut();
     setState(() {
       userPage = Home(
-        onSignin: () {
-          _signin();
-          print("Sign");
-        },
+        onSignin: _signin,
         onLogout: _logout,
         showLoading: false,
       );
