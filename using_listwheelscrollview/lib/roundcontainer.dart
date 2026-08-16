@@ -4,7 +4,7 @@ class NewWidget extends StatelessWidget {
   final Widget l;
   final String s;
   double radius = 8;
-  NewWidget({this.size, this.l, this.s});
+  NewWidget({required this.size, required this.l, required this.s});
   final double size;
 
   @override
