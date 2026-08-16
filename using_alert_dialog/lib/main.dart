@@ -27,7 +27,7 @@ class MyHomeState extends State<MyHome> {
         ),
         body: Container(
           child: Center(
-            child: RaisedButton(
+            child: ElevatedButton(
                 child: Text("Hit to alert!"),
                 // On press of the button
                 onPressed: () {
