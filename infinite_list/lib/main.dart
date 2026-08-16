@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Infinite List',
       theme: ThemeData(
-          primaryColor: Colors.blue, accentColor: Colors.lightBlue),
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+              .copyWith(secondary: Colors.lightBlue)),
       home: RandomWords(),
     );
   }
@@ -53,12 +54,10 @@ class RandomWordsState extends State<RandomWords> {
               );
             },
           );
-          final divided = ListTile
-              .divideTiles(
-                context: context,
-                tiles: tiles,
-              )
-              .toList();
+          final divided = ListTile.divideTiles(
+            context: context,
+            tiles: tiles,
+          ).toList();
 
           return Scaffold(
             appBar: AppBar(
