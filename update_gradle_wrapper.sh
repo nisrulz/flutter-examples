@@ -16,30 +16,49 @@
 # ______________________________________________________________________
 #  Call as
 #  ./update_gradle_wrapper.sh
+#  ./update_gradle_wrapper.sh --version 9.7.0
 # ______________________________________________________________________
 
-read -p "  ❓  Update gradle wrapper to which version?   " version
+get_version() {
+	if [ "$1" = "--version" ]; then
+		if [ -z "$2" ]; then
+			echo "      ✖  No version specified. Use: ./update_gradle_wrapper.sh --version 9.7.0" >&2
+			exit 1
+		fi
+		echo "      Using provided Gradle version: $2" >&2
+		echo "$2"
+	else
+		echo "      Fetching the latest Gradle version from GitHub..." >&2
+		local latest
+		latest=$(curl -sL https://api.github.com/repos/gradle/gradle/releases/latest | grep -m1 '"tag_name":' | sed -E 's/.*"tag_name":[[:space:]]*"v?([^"]+)".*/\1/')
+		if [ -z "$latest" ]; then
+			echo "      ✖  Could not fetch the latest Gradle version. Check your network connection." >&2
+			exit 1
+		fi
+		echo "      Latest Gradle version is: $latest" >&2
+		echo "$latest"
+	fi
+}
 
-# Iterate over each child directory inside the current directory
+update_wrapper() {
+	local project_dir="$1"
+	cd "$project_dir" || return
+
+	./gradlew clean | egrep 'FAILED|WARNING'
+	./gradlew wrapper --gradle-version "$version" --distribution-type bin | grep "FAILED"
+
+	echo "$project_dir" | awk -F'/' '{print $2}' | xargs -I{} echo "      ↪️  {} ✔️"
+
+	cd ../../
+}
+
+version=$(get_version "$1" "$2")
+
 echo "      Updating gradle wrapper for:"
-# Iterate over each sub-directory inside the current directory
 for DIR in ./*;
 do
-	# Check if gradlew exists inside the $DIR directory
-	# If it does then it is an Gradle project
 	if [ -f "$DIR/android/gradlew" ]; then
-		# Navigate into the sub directory
-		cd "$DIR/android"
-
-		# Run command inside the sub-directory i.e Gradle project
-		./gradlew clean | egrep 'FAILED|WARNING' 
-		./gradlew wrapper --gradle-version $version --distribution-type bin | grep "FAILED"
-
-		# Print the name of the sub directory when done
-		echo "$DIR" | awk -F'/' '{print $2}' | xargs -I{} echo "      ↪️  {} ✔️"
-
-		# Go back to parent directory
-		cd ../../
+		update_wrapper "$DIR/android"
 	fi
 done
 
