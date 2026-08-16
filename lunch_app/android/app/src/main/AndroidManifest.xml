@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="studio.sdev.lunch_app">
+>
    <application
         android:label="lunch_app"
         android:icon="@mipmap/ic_launcher">
