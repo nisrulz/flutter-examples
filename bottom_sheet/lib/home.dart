@@ -22,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new RaisedButton(
+            new ElevatedButton(
               child: Text(
                 "Bottom Sheet",
                 style: TextStyle(fontSize: 20),
