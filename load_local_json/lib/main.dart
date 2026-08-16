@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  List data;
+  late List data;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,7 @@ class MyAppState extends State<MyApp> {
           child: Center(
             // Use future builder and DefaultAssetBundle to load the local JSON file
             child: FutureBuilder(
-                future: DefaultAssetBundle
-                    .of(context)
+                future: DefaultAssetBundle.of(context)
                     .loadString('data_repo/starwars_data.json'),
                 builder: (context, snapshot) {
                   // Decode the JSON
@@ -47,8 +46,7 @@ class MyAppState extends State<MyApp> {
                                 "Hair Color: " + new_data[index]['hair_color']),
                             Text(
                                 "Skin Color: " + new_data[index]['skin_color']),
-                            Text(
-                                "Eye Color: " + new_data[index]['eye_color']),
+                            Text("Eye Color: " + new_data[index]['eye_color']),
                             Text(
                                 "Birth Year: " + new_data[index]['birth_year']),
                             Text("Gender: " + new_data[index]['gender'])

@@ -15,7 +15,7 @@ class MyButton extends StatefulWidget {
 
 class MyButtonState extends State<MyButton> {
   int counter = 0;
-  List<String> strings = ['Flutter', 'is', 'cool', "and","awesome!"];
+  List<String> strings = ['Flutter', 'is', 'cool', "and", "awesome!"];
   String displayedString = "Hello World!";
 
   void onPressOfButton() {
@@ -44,7 +44,7 @@ class MyButtonState extends State<MyButton> {
                   "Press me",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.red,
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 onPressed: onPressOfButton,
               )
             ],

@@ -21,10 +21,7 @@ class BiometricsVerifier {
     try {
       didAuthenticate = await auth.authenticate(
         localizedReason: prompt ?? 'Please authenticate with biometrics',
-        options: const AuthenticationOptions(
-          stickyAuth: true,
-          biometricOnly: true,
-        ),
+        biometricOnly: true,
       );
     } on PlatformException {
       throw "Platform Exception : Biometrics Failed !";
