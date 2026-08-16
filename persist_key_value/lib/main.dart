@@ -85,11 +85,11 @@ class MyHomeState extends State<MyHome> {
                 textScaleFactor: 10.0,
               ),
               Padding(padding: EdgeInsets.all(10.0)),
-              RaisedButton(
+              ElevatedButton(
                   onPressed: _onIncrementHit,
                   child: Text('Increment Counter')),
               Padding(padding: EdgeInsets.all(10.0)),
-              RaisedButton(
+              ElevatedButton(
                   onPressed: _onDecrementHit,
                   child: Text('Decrement Counter')),
             ],
