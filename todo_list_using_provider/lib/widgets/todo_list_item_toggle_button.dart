@@ -12,12 +12,17 @@ class TodoListItemToggleButton extends StatelessWidget {
       builder: (context, todo, child) {
         print('rebuilding Consumer Todo List Item Toggle Item Button');
 
-        return new ElevatedButton(
-          onPressed: (){
+        return ElevatedButton(
+          onPressed: () {
             todo.toggle();
           },
-          color: todo.done ? Colors.blue : Colors.red,
-          child: new Icon(Icons.refresh, color: Colors.white70,),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: todo.done ? Colors.blue : Colors.red,
+          ),
+          child: Icon(
+            Icons.refresh,
+            color: Colors.white70,
+          ),
         );
       },
     );

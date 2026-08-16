@@ -4,7 +4,7 @@ import 'package:flutter_new_provider_todo/models/todo.dart';
 /// This class represents a model
 /// that notify listeners when it has some changes
 class TodoList extends ChangeNotifier {
-  List<Todo> _list = new List<Todo>();
+  List<Todo> _list = [];
 
   List<Todo> get list => _list;
 

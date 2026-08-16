@@ -5,8 +5,7 @@ class Todo extends ChangeNotifier {
   String title;
   bool done;
 
-  Todo({@required this.id, this.title, this.done = false});
-
+  Todo({required this.id, this.title = '', this.done = false});
 
   /// Toggles the value of the item and notify to listeners
   void toggle() {

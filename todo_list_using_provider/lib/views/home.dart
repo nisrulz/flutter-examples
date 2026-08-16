@@ -6,7 +6,7 @@ import '../widgets/add_button.dart';
 class MyHomePage extends StatelessWidget {
   final String title;
 
-  const MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
