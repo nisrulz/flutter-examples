@@ -92,12 +92,12 @@ and other fields as per requirement
             children: <Widget>[
               Text(
                 '$title',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               SizedBox(height: 20.0,),
               Text(
                 messageData,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
             ],
           ),
@@ -135,7 +135,7 @@ and other fields as per requirement
               ],
             ),
             actions: [
-              FlatButton(
+              TextButton(
                   onPressed: () => Navigator.pop(context), child: Text('Ok'))
             ],
           );
