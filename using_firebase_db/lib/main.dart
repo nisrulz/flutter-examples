@@ -4,13 +4,12 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class Note {
-  String id;
-  String content;
-  String createdOn;
+  late String id;
+  late String content;
+  late String createdOn;
 
-  Note(content) {
-    this.content = content;
-    this.createdOn = DateTime.now().toString();
+  Note(this.content) {
+    createdOn = DateTime.now().toString();
   }
 }
 
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({super.key, required this.title});
 
   final String title;
   @override
@@ -38,16 +37,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final notesRef = FirebaseDatabase.instance.reference().child('notes');
+  final notesRef = FirebaseDatabase.instance.ref().child('notes');
   final inputController = TextEditingController();
-  StreamSubscription<Event> _noteAddedStream;
-  var items;
+  late StreamSubscription<DatabaseEvent> _noteAddedStream;
+  List<Note> items = [];
 
   @override
   void initState() {
     super.initState();
 
-    items = new List();
     _noteAddedStream =
         notesRef.orderByChild("created_on").onChildAdded.listen(_onNoteAdded);
   }
@@ -66,11 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // Fired whenever the database sees a new child under the notes
   // database reference
-  void _onNoteAdded(Event event) {
+  void _onNoteAdded(DatabaseEvent event) {
     setState(() {
-      var note = Note(event.snapshot.value["content"]);
-      note.id = event.snapshot.key;
-      note.createdOn = event.snapshot.value["created_on"];
+      final value = event.snapshot.value as Map;
+      var note = Note(value["content"] as String);
+      note.id = event.snapshot.key!;
+      note.createdOn = value["created_on"] as String;
       items.add(note);
     });
   }
