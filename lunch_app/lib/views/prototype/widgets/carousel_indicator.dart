@@ -5,8 +5,7 @@ class CarouselIndicator extends StatelessWidget {
   final int selected;
 
   const CarouselIndicator(
-      {Key key, @required this.length, @required this.selected})
-      : super(key: key);
+      {super.key, required this.length, required this.selected});
 
   @override
   Widget build(BuildContext context) {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class OptionsSelector extends StatefulWidget {
   final Function(String) onChange;
 
-  const OptionsSelector({Key key, @required this.onChange}) : super(key: key);
+  const OptionsSelector({super.key, required this.onChange});
 
   @override
   _OptionsSelectorState createState() => _OptionsSelectorState();
@@ -12,7 +12,7 @@ class OptionsSelector extends StatefulWidget {
 class _OptionsSelectorState extends State<OptionsSelector> {
   final List<String> options = ["Offers", "Foods", "Drinks"];
 
-  int _current;
+  int _current = 0;
 
   @override
   void initState() {

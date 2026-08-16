@@ -5,7 +5,7 @@ import 'package:lunch_app/views/prototype/widgets/main_btn.dart';
 class CategorySelector extends StatefulWidget {
   final Function(Category) onChange;
 
-  const CategorySelector({Key key, @required this.onChange}) : super(key: key);
+  const CategorySelector({super.key, required this.onChange});
 
   @override
   _CategorySelectorState createState() => _CategorySelectorState();
@@ -18,7 +18,7 @@ class _CategorySelectorState extends State<CategorySelector> {
     Category("Drinks", Icons.local_drink_sharp),
   ];
 
-  int _current;
+  int _current = 0;
 
   @override
   void initState() {

@@ -9,7 +9,7 @@ class FoodDetailView extends StatefulWidget {
 }
 
 class _FoodDetailViewState extends State<FoodDetailView> {
-  int _currentPage;
+  int _currentPage = 0;
 
   @override
   void initState() {

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class MainBtn extends StatelessWidget {
-  final IconData icon;
+  final IconData? icon;
   final String title;
   final bool active;
 
-  final Function onTap;
+  final GestureTapCallback? onTap;
 
   const MainBtn({
-    Key key,
+    super.key,
     this.icon,
     this.title = "All",
     this.active = true,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

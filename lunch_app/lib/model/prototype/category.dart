@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class Category {
   final String title;
-  final IconData icon;
+  final IconData? icon;
 
   Category(this.title, this.icon);
 
@@ -14,5 +14,5 @@ class Category {
   }
 
   @override
-  int get hashCode => title.hashCode ^ icon.hashCode;
+  int get hashCode => title.hashCode ^ (icon?.hashCode ?? 0);
 }
