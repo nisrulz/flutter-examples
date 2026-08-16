@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project/models/ListTileModel.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -39,7 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 void _openBottomSheet(context) {
-
   showModalBottomSheet(
     context: context,
     builder: (builder) {
