@@ -351,3 +351,5 @@ build/
 
 **/flutter_export_environment.sh
 **/.dart_tool
+
+.trash/
