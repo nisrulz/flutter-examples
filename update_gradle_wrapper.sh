@@ -42,14 +42,14 @@ get_version() {
 
 update_wrapper() {
 	local project_dir="$1"
-	cd "$project_dir" || return
+	local props="$project_dir/gradle/wrapper/gradle-wrapper.properties"
+	if [ ! -f "$props" ]; then
+		echo "      ↪️  $(basename "$project_dir") — no gradle-wrapper.properties, skipped" >&2
+		return
+	fi
 
-	./gradlew clean | egrep 'FAILED|WARNING'
-	./gradlew wrapper --gradle-version "$version" --distribution-type bin | grep "FAILED"
-
-	echo "$project_dir" | awk -F'/' '{print $2}' | xargs -I{} echo "      ↪️  {} ✔️"
-
-	cd ../../
+	sed -i '' -E "s#(gradle-)[0-9]+(\.[0-9]+)*(-(bin|all)\.zip)#\1${version}\3#" "$props"
+	echo "      ↪️  $(basename "$(dirname "$project_dir")") ✔️ (gradle $version)"
 }
 
 version=$(get_version "$1" "$2")
